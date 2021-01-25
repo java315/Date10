@@ -2,7 +2,9 @@ Date10 设计文档
 
 [TOC]
 
+## 写在开头
 
+>重点强调的是：**数据描述表示的不是数据模型的完整定义，而是在这个页面下可能会用到的数据**，数据模型的实现将严格按照数据描述中进行实现，数据接口内的描述也将持续更新
 
 ## 1 首页
 
@@ -184,33 +186,141 @@ class User {
 
 ### 5.1 页面布局
 
-
+![image-20210125202944009](D:\github\Date10\design.assets\image-20210125202944009.png)
 
 ### 5.2 功能简述
 
+展示一条动态的详细信息
+
 ### 5.3 数据接口
+
+```swift
+class News{
+    var postId:Int //不展示，用于索引
+    var title:String
+    var content:String
+    var poster:String
+    var good:Int  //点赞
+    var address:String
+    var frontImg:UIImage
+    var isPublic:Bool
+    var images = [UIImage]() //不在首页展示
+    var comments = [Comment]()
+    var postDate : Date
+}
+
+class Comment {
+    var content:String
+    var date:Date
+    var commenter:String
+    var good:Int
+}
+```
+
+
 
 ### 5.4 相关代码
 
+- `Comment.swift`
+- `News.swift`
+- `NewsDetailViewController.swift`
+
 ### 5.5 跳转描述
 
-
+无
 
 
 
 ## 6 美食分类
 
+### 6.1 页面布局
+
+![image-20210125203000604](D:\github\Date10\design.assets\image-20210125203000604.png)
+
+### 6.2 功能简述
+
+- 搜索
+- 展示美食（table view)
+
+### 6.3 数据接口
+
+```swift
+class Food {
+    var name : String
+    var score : Float
+    var averagePrice : Float
+    var address : String
+    var shortComment : String
+    var frontImg : UIImage
+    func getCommentsCount() -> Int {}
+}
+```
 
 
+
+### 6.4 相关代码
+
+- `FoodViewController.swift`
+- `Food.swift`
+
+### 6.5 跳转描述
+
+1. 点击具体的美食后将跳转到[地点详情页](#10 地点详情页)
 
 
 ## 7 景点分类
 
+### 7.1 页面布局
 
+### 7.2 功能简述
+
+### 7.3 数据接口
+
+### 7.4 相关代码
+
+### 7.5 跳转描述
 
 
 
 ## 8 地点详情页
+
+### 8.1 页面布局
+
+### 8.2 功能简述
+
+### 8.3 数据接口
+
+### 8.4 相关代码
+
+### 8.5 跳转描述
+
+
+
+## 9 动态发布页
+
+### 9.1 页面布局
+
+### 9.2 功能简述
+
+### 9.3 数据接口
+
+### 9.4 相关代码
+
+### 9.5 跳转描述
+
+## 10 地点详情页
+
+### 10.1 页面布局
+
+### 10.2 功能简述
+
+### 10.3 数据接口
+
+### 10.4 相关代码
+
+### 10.5 跳转描述
+
+
 
 
 
