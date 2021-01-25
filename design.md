@@ -34,22 +34,25 @@ class News{
     var good:Int  //点赞
     var address:String
     var frontImg:UIImage
+    var isPublic:Bool
+    var images = [UIImage]() //不在首页展示
 }
 ```
 
 
 
-### 1.4 控制代码
+### 1.4 相关代码
 
-- `IndexViewController.swift`：实现页面控制
-- `NewsTableViewCell`：展示动态的卡片
+- `IndexViewController.swift`：实现页面相关
+- `NewsTableViewCell.swift`：展示动态的卡片
+- `ButtonCollectionViewCell.swift`：分类导航的按钮
 
 
 
 ### 1.5 跳转描述
 
-1. 点击分类导航的按钮可以跳转到具体的分类页面
-2. 点击动态展示的某一条动态会跳转到具体的动态详情页
+1. 点击分类导航的按钮可以跳转到具体的分类页面：[美食分类](#6 美食分类)、[景点分类](#7 景点分类)
+2. 点击动态展示的某一条动态会跳转到具体的[动态详情页](#5 动态详情页)
 
 ## 2 消息
 
@@ -59,7 +62,7 @@ class News{
 
 查看其他用户、系统向该用户发送的消息
 
-- 搜索：根据用户输入的关键字查找相关消息并跳转到[消息搜索结果页]()展示
+- 搜索：根据用户输入的关键字查找相关消息并跳转到[消息搜索结果页](#暂无)展示
 - 系统通知
 - 收到的赞
 - 新增粉丝
@@ -82,13 +85,17 @@ class Communication {
 
 
 
-### 2.4 控制代码
+### 2.4 相关代码
+
+- `Message.swift`：消息的定义
+- `Communication.swift`：会话的定义
+- `MessageTableViewController.swift`
+- `MessageTableViewCell.swift`
 
 ### 2.5 跳转描述
 
-
-
-
+1. 点击具体的会话会跳转到[会话详情页](#暂无)
+2. 系统通知、收到的赞、新增粉丝暂时留空
 
 ## 3 我们
 
@@ -96,11 +103,43 @@ class Communication {
 
 ### 3.2 功能简述
 
+- 情侣信息展示（horizontal stack view）：展示情侣头像和情侣信息（见[数据接口](#3.3 数据接口)），如果没有情侣，则将另一个头像改为灰色，情侣信息展示为“单身狗贵族”
+- 情侣动态展示（table view）：展示情侣两人发布的动态信息
+- 动态发布（button）
+
 ### 3.3 数据接口
 
-### 3.4 控制代码
+```swift
+class couple {
+    var boy : String
+    var girl : String
+    var startTime : Date
+    var sweetValue: Int
+    func getTogetherDays() -> Int {}
+    
+}
+
+class News { // 同首页中的动态定义
+    
+}
+```
+
+
+
+### 3.4 相关代码
+
+- `Couple.swift`：情侣的定义
+- `NewsTableViewController`
+
+
 
 ### 3.5 跳转描述
+
+1. 点击动态发布按钮，跳转到[动态发布页面](#9 动态发布页)
+
+2. 点击某一动态，跳转到[动态详情页](#5 动态详情页)
+
+   
 
 ## 4 我
 
@@ -110,7 +149,7 @@ class Communication {
 
 ### 4.3 数据接口
 
-### 4.4 控制代码
+### 4.4 相关代码
 
 ### 4.5 跳转描述
 
@@ -124,7 +163,7 @@ class Communication {
 
 ### 5.3 数据接口
 
-### 5.4 控制代码
+### 5.4 相关代码
 
 ### 5.5 跳转描述
 
@@ -146,3 +185,10 @@ class Communication {
 
 ## 8 地点详情页
 
+
+
+
+
+## 暂无
+
+暂无，后续会加上
