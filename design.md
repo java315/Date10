@@ -29,7 +29,7 @@ Date10 设计文档
 动态展示的数据定义为：
 
 ```swift
-class News{
+class Post{
     var postId:Int //不展示，用于索引
     var title:String
     var poster:String
@@ -116,7 +116,7 @@ class Communication {
 ### 3.3 数据接口
 
 ```swift
-class couple {
+class Couple {
     var boy : String
     var girl : String
     var startTime : Date
@@ -125,7 +125,7 @@ class couple {
     
 }
 
-class News { // 同首页中的动态定义
+class Post { // 同首页中的动态定义
     
 }
 ```
@@ -195,7 +195,7 @@ class User {
 ### 5.3 数据接口
 
 ```swift
-class News{
+class Post{
     var postId:Int //不展示，用于索引
     var title:String
     var content:String
@@ -209,7 +209,7 @@ class News{
     var postDate : Date
 }
 
-class Comment {
+class PostComment {
     var content:String
     var date:Date
     var commenter:String
