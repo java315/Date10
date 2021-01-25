@@ -8,13 +8,13 @@
 import UIKit
 
 class IndexViewController: UIViewController {
-    var news = ["java","swift","js","ios","java","swift","js","ios"]
-    @IBOutlet weak var newsTable: UITableView!
+    var news = ["java","swift","js","ios","java","swift","js","ios","java"]
     @IBOutlet weak var buttonCollection: UICollectionView!
+    @IBOutlet weak var newsCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsTable.delegate = self
-        newsTable.dataSource = self
+        newsCollection.delegate = self
+        newsCollection.dataSource = self
         buttonCollection.delegate = self
         buttonCollection.dataSource = self
     }
@@ -32,24 +32,24 @@ class IndexViewController: UIViewController {
 
 }
 
-extension IndexViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = newsTable.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as! NewsTableViewCell
-        print(self.news[indexPath.row])
-        cell.textLabel?.text = self.news[indexPath.row]
-        return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.news.count)
-        return self.news.count
-    }
-    
-}
+//extension IndexViewController: UITableViewDataSource, UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = newsTable.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as! NewsTableViewCell
+//        print(self.news[indexPath.row])
+//        cell.textLabel?.text = self.news[indexPath.row]
+//        return cell
+//    }
+//    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        print(self.news.count)
+//        return self.news.count
+//    }
+//    
+//}
 
 extension IndexViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
