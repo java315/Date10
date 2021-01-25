@@ -19,6 +19,12 @@
 		D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D0325BBE426005DFE53 /* Date10.xcdatamodeld */; };
 		D0D22D0725BBE429005DFE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D22D0625BBE429005DFE53 /* Assets.xcassets */; };
 		D0D22D0A25BBE429005DFE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D22D0825BBE429005DFE53 /* LaunchScreen.storyboard */; };
+		D0D22D1825BD9974005DFE53 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D1725BD9974005DFE53 /* IndexViewController.swift */; };
+		D0D22D1E25BDB09C005DFE53 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D1D25BDB09C005DFE53 /* NewsTableViewCell.swift */; };
+		D0D22D2125BDB3B4005DFE53 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */; };
+		D0D22D2425BDC635005DFE53 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */; };
+		D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2625BDCE8E005DFE53 /* Message.swift */; };
+		D0D22D2B25BEAA0A005DFE53 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2A25BEAA0A005DFE53 /* Communication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		D0D22D0625BBE429005DFE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0D22D0925BBE429005DFE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0D22D0B25BBE429005DFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D22D1725BD9974005DFE53 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		D0D22D1D25BDB09C005DFE53 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		D0D22D2625BDCE8E005DFE53 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D0D22D2A25BEAA0A005DFE53 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +84,19 @@
 				D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */,
 				D0D22CFE25BBE426005DFE53 /* ViewController.swift */,
 				D0D22D0025BBE426005DFE53 /* Main.storyboard */,
+
 				7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */,
 				7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */,
 				7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */,
 				7B5E8ECB25BDA70B00C03235 /* News.swift */,
 				7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */,
+                
+				D0D22D1725BD9974005DFE53 /* IndexViewController.swift */,
+				D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */,
+				D0D22D2625BDCE8E005DFE53 /* Message.swift */,
+				D0D22D2A25BEAA0A005DFE53 /* Communication.swift */,
+				D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */,
+                
 				D0D22D0625BBE429005DFE53 /* Assets.xcassets */,
 				D0D22D0825BBE429005DFE53 /* LaunchScreen.storyboard */,
 				D0D22D0B25BBE429005DFE53 /* Info.plist */,
@@ -162,8 +182,15 @@
 				7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */,
 				7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */,
 				7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */,
+                
+				D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */,
+
 				D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */,
 				D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */,
+				D0D22D2B25BEAA0A005DFE53 /* Communication.swift in Sources */,
+				D0D22D2125BDB3B4005DFE53 /* ButtonCollectionViewCell.swift in Sources */,
+				D0D22D2425BDC635005DFE53 /* MessageTableViewController.swift in Sources */,
+				D0D22D1825BD9974005DFE53 /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
