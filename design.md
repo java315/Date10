@@ -8,7 +8,7 @@ Date10 设计文档
 
 ### 1.1 页面布局
 
-暂无
+![image-20210125195254366](D:\github\Date10\design.assets\image-20210125195254366.png)
 
 ### 1.2 功能简述
 
@@ -58,6 +58,8 @@ class News{
 
 ### 2.1 页面布局
 
+<img src="D:\github\Date10\design.assets\image-20210125195311513.png" alt="image-20210125195311513"  />
+
 ### 2.2 功能简述
 
 查看其他用户、系统向该用户发送的消息
@@ -100,6 +102,8 @@ class Communication {
 ## 3 我们
 
 ### 3.1 页面布局
+
+![image-20210125195341448](D:\github\Date10\design.assets\image-20210125195341448.png)
 
 ### 3.2 功能简述
 
@@ -145,19 +149,42 @@ class News { // 同首页中的动态定义
 
 ### 4.1 页面布局
 
+![image-20210125195357520](D:\github\Date10\design.assets\image-20210125195357520.png)
+
 ### 4.2 功能简述
+
+查看个人信息以及修改个人设置
 
 ### 4.3 数据接口
 
+```swift
+class User {
+    var name : String
+    var npy : String
+    var fans = [String]()
+    var followings = [String]()
+    var birthday : Date
+    var avatar : UIImage? //头像
+    
+}
+```
+
+
+
 ### 4.4 相关代码
+
+- `User.swift`
+- `MeViewController.swift`
 
 ### 4.5 跳转描述
 
-
+**暂时不做跳转**
 
 ## 5 动态详情页
 
 ### 5.1 页面布局
+
+
 
 ### 5.2 功能简述
 
