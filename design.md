@@ -33,7 +33,7 @@ class News{
     var postId:Int //不展示，用于索引
     var title:String
     var poster:String
-    var good:Int  //点赞
+    var likes:Int  //点赞
     var address:String
     var frontImg:UIImage
     var isPublic:Bool
@@ -200,7 +200,7 @@ class News{
     var title:String
     var content:String
     var poster:String
-    var good:Int  //点赞
+    var likes:Int  //点赞
     var address:String
     var frontImg:UIImage
     var isPublic:Bool
@@ -213,7 +213,7 @@ class Comment {
     var content:String
     var date:Date
     var commenter:String
-    var good:Int
+    var likes:Int
 }
 ```
 
