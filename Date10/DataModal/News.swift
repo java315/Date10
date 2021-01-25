@@ -17,9 +17,6 @@ class News{
     
     // MARK: Initialization
     init(text: String, photo: UIImage?, visiable: Bool){
-//        if text.isEmpty && photo == nil{
-//            return nil
-//        }
         self.text = text
         self.photo = photo
         self.visiable = visiable

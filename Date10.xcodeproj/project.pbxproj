@@ -12,6 +12,7 @@
 		7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */; };
 		7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */; };
 		7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */; };
+		D059443C25BF4AE200BD068E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059443B25BF4AE200BD068E /* Post.swift */; };
 		D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */; };
 		D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */; };
 		D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFE25BBE426005DFE53 /* ViewController.swift */; };
@@ -20,11 +21,15 @@
 		D0D22D0725BBE429005DFE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D22D0625BBE429005DFE53 /* Assets.xcassets */; };
 		D0D22D0A25BBE429005DFE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D22D0825BBE429005DFE53 /* LaunchScreen.storyboard */; };
 		D0D22D1825BD9974005DFE53 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D1725BD9974005DFE53 /* IndexViewController.swift */; };
-		D0D22D1E25BDB09C005DFE53 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D1D25BDB09C005DFE53 /* NewsTableViewCell.swift */; };
 		D0D22D2125BDB3B4005DFE53 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */; };
 		D0D22D2425BDC635005DFE53 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */; };
 		D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2625BDCE8E005DFE53 /* Message.swift */; };
 		D0D22D2B25BEAA0A005DFE53 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2A25BEAA0A005DFE53 /* Communication.swift */; };
+		D0D22D2F25BF1B4D005DFE53 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2E25BF1B4D005DFE53 /* Food.swift */; };
+		D0D22D3225BF1D24005DFE53 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D3125BF1D24005DFE53 /* Comment.swift */; };
+		D0D22D3825BF26CE005DFE53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D3725BF26CE005DFE53 /* User.swift */; };
+		D0D22D3B25BF26E5005DFE53 /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D3A25BF26E5005DFE53 /* Couple.swift */; };
+		D0D22D3F25BF289C005DFE53 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D3E25BF289C005DFE53 /* DateUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,7 @@
 		7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		D059443B25BF4AE200BD068E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D0D22CF725BBE426005DFE53 /* Date10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Date10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,11 +49,15 @@
 		D0D22D0925BBE429005DFE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0D22D0B25BBE429005DFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D22D1725BD9974005DFE53 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
-		D0D22D1D25BDB09C005DFE53 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		D0D22D2625BDCE8E005DFE53 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D0D22D2A25BEAA0A005DFE53 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
+		D0D22D2E25BF1B4D005DFE53 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		D0D22D3125BF1D24005DFE53 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		D0D22D3725BF26CE005DFE53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D0D22D3A25BF26E5005DFE53 /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
+		D0D22D3E25BF289C005DFE53 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,29 +90,48 @@
 		D0D22CF925BBE426005DFE53 /* Date10 */ = {
 			isa = PBXGroup;
 			children = (
+				D0D22D3D25BF2862005DFE53 /* utils */,
+				D0D22D3525BF1D6F005DFE53 /* DataModal */,
 				D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */,
 				D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */,
 				D0D22CFE25BBE426005DFE53 /* ViewController.swift */,
 				D0D22D0025BBE426005DFE53 /* Main.storyboard */,
-
 				7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */,
 				7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */,
 				7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */,
-				7B5E8ECB25BDA70B00C03235 /* News.swift */,
 				7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */,
-                
 				D0D22D1725BD9974005DFE53 /* IndexViewController.swift */,
 				D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */,
-				D0D22D2625BDCE8E005DFE53 /* Message.swift */,
-				D0D22D2A25BEAA0A005DFE53 /* Communication.swift */,
 				D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */,
-                
 				D0D22D0625BBE429005DFE53 /* Assets.xcassets */,
 				D0D22D0825BBE429005DFE53 /* LaunchScreen.storyboard */,
 				D0D22D0B25BBE429005DFE53 /* Info.plist */,
 				D0D22D0325BBE426005DFE53 /* Date10.xcdatamodeld */,
 			);
 			path = Date10;
+			sourceTree = "<group>";
+		};
+		D0D22D3525BF1D6F005DFE53 /* DataModal */ = {
+			isa = PBXGroup;
+			children = (
+				D0D22D2625BDCE8E005DFE53 /* Message.swift */,
+				D0D22D3125BF1D24005DFE53 /* Comment.swift */,
+				D0D22D2A25BEAA0A005DFE53 /* Communication.swift */,
+				D0D22D2E25BF1B4D005DFE53 /* Food.swift */,
+				7B5E8ECB25BDA70B00C03235 /* News.swift */,
+				D0D22D3725BF26CE005DFE53 /* User.swift */,
+				D0D22D3A25BF26E5005DFE53 /* Couple.swift */,
+				D059443B25BF4AE200BD068E /* Post.swift */,
+			);
+			path = DataModal;
+			sourceTree = "<group>";
+		};
+		D0D22D3D25BF2862005DFE53 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				D0D22D3E25BF289C005DFE53 /* DateUtil.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,20 +206,24 @@
 			files = (
 				7B5E8ECC25BDA70B00C03235 /* News.swift in Sources */,
 				7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */,
+				D0D22D2F25BF1B4D005DFE53 /* Food.swift in Sources */,
+				D0D22D3F25BF289C005DFE53 /* DateUtil.swift in Sources */,
+				D0D22D3B25BF26E5005DFE53 /* Couple.swift in Sources */,
 				D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */,
 				D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */,
 				7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */,
 				7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */,
+				D0D22D3825BF26CE005DFE53 /* User.swift in Sources */,
 				7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */,
-                
 				D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */,
-
 				D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */,
 				D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */,
+				D0D22D3225BF1D24005DFE53 /* Comment.swift in Sources */,
 				D0D22D2B25BEAA0A005DFE53 /* Communication.swift in Sources */,
 				D0D22D2125BDB3B4005DFE53 /* ButtonCollectionViewCell.swift in Sources */,
 				D0D22D2425BDC635005DFE53 /* MessageTableViewController.swift in Sources */,
 				D0D22D1825BD9974005DFE53 /* IndexViewController.swift in Sources */,
+				D059443C25BF4AE200BD068E /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
