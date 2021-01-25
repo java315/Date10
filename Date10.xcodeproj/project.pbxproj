@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */; };
+		7B5E8ECC25BDA70B00C03235 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E8ECB25BDA70B00C03235 /* News.swift */; };
+		7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */; };
+		7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */; };
+		7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */; };
 		D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */; };
 		D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */; };
 		D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFE25BBE426005DFE53 /* ViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewsViewController.swift; sourceTree = "<group>"; };
+		7B5E8ECB25BDA70B00C03235 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		D0D22CF725BBE426005DFE53 /* Date10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Date10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +72,11 @@
 				D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */,
 				D0D22CFE25BBE426005DFE53 /* ViewController.swift */,
 				D0D22D0025BBE426005DFE53 /* Main.storyboard */,
+				7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */,
+				7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */,
+				7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */,
+				7B5E8ECB25BDA70B00C03235 /* News.swift */,
+				7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */,
 				D0D22D0625BBE429005DFE53 /* Assets.xcassets */,
 				D0D22D0825BBE429005DFE53 /* LaunchScreen.storyboard */,
 				D0D22D0B25BBE429005DFE53 /* Info.plist */,
@@ -140,8 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5E8ECC25BDA70B00C03235 /* News.swift in Sources */,
+				7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */,
 				D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */,
 				D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */,
+				7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */,
+				7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */,
+				7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */,
 				D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */,
 				D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */,
 			);
@@ -291,6 +311,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UG9QKS47U2;
 				INFOPLIST_FILE = Date10/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UG9QKS47U2;
 				INFOPLIST_FILE = Date10/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
