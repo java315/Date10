@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */; };
 		7B5E8ECC25BDA70B00C03235 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E8ECB25BDA70B00C03235 /* News.swift */; };
+		7B67536725BF09FB00C1D44F /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536425BF09FA00C1D44F /* ButtonCollectionViewCell.swift */; };
+		7B67536825BF09FB00C1D44F /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536525BF09FA00C1D44F /* NewsCollectionViewCell.swift */; };
+		7B67536925BF09FB00C1D44F /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536625BF09FA00C1D44F /* IndexViewController.swift */; };
+		7B67536E25BF11CA00C1D44F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536D25BF11CA00C1D44F /* MessageViewController.swift */; };
+		7B67537125BF121400C1D44F /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67537025BF121400C1D44F /* MessageCollectionViewCell.swift */; };
+		7B67537625BF154800C1D44F /* WeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67537525BF154800C1D44F /* WeViewController.swift */; };
 		7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */; };
 		7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */; };
 		7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */; };
@@ -19,10 +25,6 @@
 		D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D0325BBE426005DFE53 /* Date10.xcdatamodeld */; };
 		D0D22D0725BBE429005DFE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D22D0625BBE429005DFE53 /* Assets.xcassets */; };
 		D0D22D0A25BBE429005DFE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D22D0825BBE429005DFE53 /* LaunchScreen.storyboard */; };
-		D0D22D1825BD9974005DFE53 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D1725BD9974005DFE53 /* IndexViewController.swift */; };
-		D0D22D1E25BDB09C005DFE53 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D1D25BDB09C005DFE53 /* NewsTableViewCell.swift */; };
-		D0D22D2125BDB3B4005DFE53 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */; };
-		D0D22D2425BDC635005DFE53 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */; };
 		D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2625BDCE8E005DFE53 /* Message.swift */; };
 		D0D22D2B25BEAA0A005DFE53 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22D2A25BEAA0A005DFE53 /* Communication.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,12 @@
 /* Begin PBXFileReference section */
 		7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewsViewController.swift; sourceTree = "<group>"; };
 		7B5E8ECB25BDA70B00C03235 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		7B67536425BF09FA00C1D44F /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B67536525BF09FA00C1D44F /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B67536625BF09FA00C1D44F /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		7B67536D25BF11CA00C1D44F /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		7B67537025BF121400C1D44F /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B67537525BF154800C1D44F /* WeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeViewController.swift; sourceTree = "<group>"; };
 		7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
@@ -42,10 +50,6 @@
 		D0D22D0625BBE429005DFE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0D22D0925BBE429005DFE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0D22D0B25BBE429005DFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0D22D1725BD9974005DFE53 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
-		D0D22D1D25BDB09C005DFE53 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
-		D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		D0D22D2625BDCE8E005DFE53 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D0D22D2A25BEAA0A005DFE53 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B67535925BF077600C1D44F /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				7B67536425BF09FA00C1D44F /* ButtonCollectionViewCell.swift */,
+				7B67536625BF09FA00C1D44F /* IndexViewController.swift */,
+				7B67536525BF09FA00C1D44F /* NewsCollectionViewCell.swift */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		7B67536C25BF118D00C1D44F /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				7B67536D25BF11CA00C1D44F /* MessageViewController.swift */,
+				7B67537025BF121400C1D44F /* MessageCollectionViewCell.swift */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		7B67537325BF138D00C1D44F /* 我们 */ = {
+			isa = PBXGroup;
+			children = (
+				7B67537525BF154800C1D44F /* WeViewController.swift */,
+			);
+			path = "我们";
+			sourceTree = "<group>";
+		};
 		D0D22CEE25BBE426005DFE53 = {
 			isa = PBXGroup;
 			children = (
@@ -80,23 +111,20 @@
 		D0D22CF925BBE426005DFE53 /* Date10 */ = {
 			isa = PBXGroup;
 			children = (
+				7B67537325BF138D00C1D44F /* 我们 */,
+				7B67535925BF077600C1D44F /* 首页 */,
+				7B67536C25BF118D00C1D44F /* 消息 */,
 				D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */,
 				D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */,
 				D0D22CFE25BBE426005DFE53 /* ViewController.swift */,
 				D0D22D0025BBE426005DFE53 /* Main.storyboard */,
-
 				7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */,
 				7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */,
 				7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */,
 				7B5E8ECB25BDA70B00C03235 /* News.swift */,
 				7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */,
-                
-				D0D22D1725BD9974005DFE53 /* IndexViewController.swift */,
-				D0D22D2325BDC635005DFE53 /* MessageTableViewController.swift */,
 				D0D22D2625BDCE8E005DFE53 /* Message.swift */,
 				D0D22D2A25BEAA0A005DFE53 /* Communication.swift */,
-				D0D22D2025BDB3B4005DFE53 /* ButtonCollectionViewCell.swift */,
-                
 				D0D22D0625BBE429005DFE53 /* Assets.xcassets */,
 				D0D22D0825BBE429005DFE53 /* LaunchScreen.storyboard */,
 				D0D22D0B25BBE429005DFE53 /* Info.plist */,
@@ -176,21 +204,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5E8ECC25BDA70B00C03235 /* News.swift in Sources */,
+				7B67536825BF09FB00C1D44F /* NewsCollectionViewCell.swift in Sources */,
 				7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */,
 				D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */,
+				7B67536E25BF11CA00C1D44F /* MessageViewController.swift in Sources */,
 				D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */,
+				7B67537125BF121400C1D44F /* MessageCollectionViewCell.swift in Sources */,
 				7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */,
+				7B67537625BF154800C1D44F /* WeViewController.swift in Sources */,
 				7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */,
 				7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */,
-                
 				D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */,
-
 				D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */,
 				D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */,
 				D0D22D2B25BEAA0A005DFE53 /* Communication.swift in Sources */,
-				D0D22D2125BDB3B4005DFE53 /* ButtonCollectionViewCell.swift in Sources */,
-				D0D22D2425BDC635005DFE53 /* MessageTableViewController.swift in Sources */,
-				D0D22D1825BD9974005DFE53 /* IndexViewController.swift in Sources */,
+				7B67536725BF09FB00C1D44F /* ButtonCollectionViewCell.swift in Sources */,
+				7B67536925BF09FB00C1D44F /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
