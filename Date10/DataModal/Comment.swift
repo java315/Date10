@@ -53,3 +53,8 @@ class FoodComment : Comment {
         self.images += images
     }
 }
+
+
+class SpotComment : FoodComment {
+    
+}

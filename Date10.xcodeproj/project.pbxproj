@@ -28,6 +28,7 @@
 		7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */; };
 		7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */; };
 		D059443C25BF4AE200BD068E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059443B25BF4AE200BD068E /* Post.swift */; };
+		D059444825C043DD00BD068E /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059444725C043DD00BD068E /* Spot.swift */; };
 		D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */; };
 		D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */; };
 		D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFE25BBE426005DFE53 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 		7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		D059443B25BF4AE200BD068E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D059444725C043DD00BD068E /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		D0D22CF725BBE426005DFE53 /* Date10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Date10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				D0D22D3725BF26CE005DFE53 /* User.swift */,
 				D0D22D3A25BF26E5005DFE53 /* Couple.swift */,
 				D059443B25BF4AE200BD068E /* Post.swift */,
+				D059444725C043DD00BD068E /* Spot.swift */,
 			);
 			path = DataModal;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				D0D22D2F25BF1B4D005DFE53 /* Food.swift in Sources */,
 				D0D22D3F25BF289C005DFE53 /* DateUtil.swift in Sources */,
 				D0D22D3B25BF26E5005DFE53 /* Couple.swift in Sources */,
+				D059444825C043DD00BD068E /* Spot.swift in Sources */,
 				D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */,
 				7B67536E25BF11CA00C1D44F /* MessageViewController.swift in Sources */,
 				D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */,
