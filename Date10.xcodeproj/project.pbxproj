@@ -106,6 +106,7 @@
 		7B67535925BF077600C1D44F /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				7B67540325C061DC00C1D44F /* 景点 */,
 				7B67538425BFCAB100C1D44F /* 美食 */,
 				7B6753AE25BFF7EB00C1D44F /* ButtonCollectionViewCell.swift */,
 				7B6753AA25BFF79D00C1D44F /* IndexViewController.swift */,
@@ -183,6 +184,11 @@
 				D059444E25C05ECD00BD068E /* GlobalData.swift */,
 			);
 			path = Data;
+		7B67540325C061DC00C1D44F /* 景点 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "景点";
 			sourceTree = "<group>";
 		};
 		D0D22CEE25BBE426005DFE53 = {
