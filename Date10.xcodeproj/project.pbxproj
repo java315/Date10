@@ -184,6 +184,8 @@
 				D059444E25C05ECD00BD068E /* GlobalData.swift */,
 			);
 			path = Data;
+            sourceTree = "<group>";
+        };
 		7B67540325C061DC00C1D44F /* 景点 */ = {
 			isa = PBXGroup;
 			children = (
