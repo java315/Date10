@@ -8,7 +8,7 @@
 import UIKit
 
 class IndexViewController: UIViewController {
-    var news = ["java","swift","js","ios","java","swift","js","ios","java"]
+    var news = ["美食","景点","js","ios","java","swift","js","ios","java"]
     @IBOutlet weak var buttonCollection: UICollectionView!
     @IBOutlet weak var newsCollection: UICollectionView!
     override func viewDidLoad() {
@@ -58,7 +58,23 @@ extension IndexViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = buttonCollection.dequeueReusableCell(withReuseIdentifier: "ButtonCollectionViewCell", for: indexPath) as! ButtonCollectionViewCell
+        cell.buttonClickedDelegate = self
         cell.label.text = news[indexPath.row]
         return cell
+    }
+}
+
+extension IndexViewController: ButtonClickedDelegate{
+    func buttonClicked(_ clickedButton: String) {
+        switch clickedButton {
+        case "美食":
+            let newVC = self.storyboard?.instantiateViewController(withIdentifier: "FoodViewController")
+            self.navigationController?.pushViewController(newVC!, animated: true)
+        case "景点":
+            let newVC = self.storyboard?.instantiateViewController(withIdentifier: "SpotViewController")
+            self.navigationController?.pushViewController(newVC!, animated: true)
+        default:
+            return
+        }
     }
 }
