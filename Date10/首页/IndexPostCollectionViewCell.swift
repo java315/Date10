@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsCollectionViewCell: UICollectionViewCell {
+class IndexPostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var frontImg: UIImageView!
     @IBOutlet weak var title: UITextField!
     @IBOutlet weak var likeImg: UIImageView!

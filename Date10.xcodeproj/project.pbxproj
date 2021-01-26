@@ -9,15 +9,24 @@
 /* Begin PBXBuildFile section */
 		7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */; };
 		7B5E8ECC25BDA70B00C03235 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E8ECB25BDA70B00C03235 /* News.swift */; };
-		7B67536725BF09FB00C1D44F /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536425BF09FA00C1D44F /* ButtonCollectionViewCell.swift */; };
-		7B67536825BF09FB00C1D44F /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536525BF09FA00C1D44F /* NewsCollectionViewCell.swift */; };
-		7B67536925BF09FB00C1D44F /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536625BF09FA00C1D44F /* IndexViewController.swift */; };
+		7B67536825BF09FB00C1D44F /* IndexPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536525BF09FA00C1D44F /* IndexPostCollectionViewCell.swift */; };
 		7B67536E25BF11CA00C1D44F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67536D25BF11CA00C1D44F /* MessageViewController.swift */; };
 		7B67537125BF121400C1D44F /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67537025BF121400C1D44F /* MessageCollectionViewCell.swift */; };
 		7B67537625BF154800C1D44F /* WeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67537525BF154800C1D44F /* WeViewController.swift */; };
+		7B67537C25BFAFB300C1D44F /* WePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67537B25BFAFB300C1D44F /* WePostCollectionViewCell.swift */; };
+		7B67538125BFBA8500C1D44F /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67538025BFBA8500C1D44F /* MeViewController.swift */; };
+		7B67539D25BFF37C00C1D44F /* GXBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67539A25BFF37A00C1D44F /* GXBanner.swift */; };
+		7B67539E25BFF37C00C1D44F /* GXBannerFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67539B25BFF37B00C1D44F /* GXBannerFlowLayout.swift */; };
+		7B67539F25BFF37C00C1D44F /* GXBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67539C25BFF37B00C1D44F /* GXBannerCell.swift */; };
+		7B6753A625BFF65E00C1D44F /* banner0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B6753A325BFF65C00C1D44F /* banner0.jpeg */; };
+		7B6753A725BFF65E00C1D44F /* banner2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B6753A425BFF65C00C1D44F /* banner2.jpeg */; };
+		7B6753A825BFF65E00C1D44F /* banner1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B6753A525BFF65D00C1D44F /* banner1.jpeg */; };
+		7B6753AB25BFF79D00C1D44F /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6753AA25BFF79D00C1D44F /* IndexViewController.swift */; };
+		7B6753AF25BFF7EB00C1D44F /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6753AE25BFF7EB00C1D44F /* ButtonCollectionViewCell.swift */; };
+		7B6753FD25C01C5200C1D44F /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6753FC25C01C5100C1D44F /* PostDetailViewController.swift */; };
+		7B67540025C01CC200C1D44F /* PostCommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6753FF25C01CC200C1D44F /* PostCommentCollectionViewCell.swift */; };
 		7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */; };
 		7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */; };
-		7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */; };
 		D059443C25BF4AE200BD068E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059443B25BF4AE200BD068E /* Post.swift */; };
 		D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */; };
 		D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */; };
@@ -38,15 +47,24 @@
 /* Begin PBXFileReference section */
 		7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewsViewController.swift; sourceTree = "<group>"; };
 		7B5E8ECB25BDA70B00C03235 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		7B67536425BF09FA00C1D44F /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
-		7B67536525BF09FA00C1D44F /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
-		7B67536625BF09FA00C1D44F /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		7B67536525BF09FA00C1D44F /* IndexPostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B67536D25BF11CA00C1D44F /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		7B67537025BF121400C1D44F /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B67537525BF154800C1D44F /* WeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeViewController.swift; sourceTree = "<group>"; };
+		7B67537B25BFAFB300C1D44F /* WePostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WePostCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B67538025BFBA8500C1D44F /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		7B67539A25BFF37A00C1D44F /* GXBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GXBanner.swift; sourceTree = "<group>"; };
+		7B67539B25BFF37B00C1D44F /* GXBannerFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GXBannerFlowLayout.swift; sourceTree = "<group>"; };
+		7B67539C25BFF37B00C1D44F /* GXBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GXBannerCell.swift; sourceTree = "<group>"; };
+		7B6753A325BFF65C00C1D44F /* banner0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner0.jpeg; sourceTree = "<group>"; };
+		7B6753A425BFF65C00C1D44F /* banner2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner2.jpeg; sourceTree = "<group>"; };
+		7B6753A525BFF65D00C1D44F /* banner1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner1.jpeg; sourceTree = "<group>"; };
+		7B6753AA25BFF79D00C1D44F /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		7B6753AE25BFF7EB00C1D44F /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B6753FC25C01C5100C1D44F /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		7B6753FF25C01CC200C1D44F /* PostCommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
-		7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		D059443B25BF4AE200BD068E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D0D22CF725BBE426005DFE53 /* Date10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Date10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,9 +98,10 @@
 		7B67535925BF077600C1D44F /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				7B67536425BF09FA00C1D44F /* ButtonCollectionViewCell.swift */,
-				7B67536625BF09FA00C1D44F /* IndexViewController.swift */,
-				7B67536525BF09FA00C1D44F /* NewsCollectionViewCell.swift */,
+				7B67538425BFCAB100C1D44F /* 美食 */,
+				7B6753AE25BFF7EB00C1D44F /* ButtonCollectionViewCell.swift */,
+				7B6753AA25BFF79D00C1D44F /* IndexViewController.swift */,
+				7B67536525BF09FA00C1D44F /* IndexPostCollectionViewCell.swift */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -100,8 +119,53 @@
 			isa = PBXGroup;
 			children = (
 				7B67537525BF154800C1D44F /* WeViewController.swift */,
+				7B67537B25BFAFB300C1D44F /* WePostCollectionViewCell.swift */,
 			);
 			path = "我们";
+			sourceTree = "<group>";
+		};
+		7B67537E25BFBA3600C1D44F /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				7B67538025BFBA8500C1D44F /* MeViewController.swift */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		7B67538425BFCAB100C1D44F /* 美食 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "美食";
+			sourceTree = "<group>";
+		};
+		7B67539825BFF2B700C1D44F /* GXBanner */ = {
+			isa = PBXGroup;
+			children = (
+				7B67539A25BFF37A00C1D44F /* GXBanner.swift */,
+				7B67539B25BFF37B00C1D44F /* GXBannerFlowLayout.swift */,
+				7B67539C25BFF37B00C1D44F /* GXBannerCell.swift */,
+			);
+			path = GXBanner;
+			sourceTree = "<group>";
+		};
+		7B6753A225BFF60400C1D44F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7B6753A325BFF65C00C1D44F /* banner0.jpeg */,
+				7B6753A525BFF65D00C1D44F /* banner1.jpeg */,
+				7B6753A425BFF65C00C1D44F /* banner2.jpeg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		7B6753F925C01BED00C1D44F /* 动态详情 */ = {
+			isa = PBXGroup;
+			children = (
+				7B6753FC25C01C5100C1D44F /* PostDetailViewController.swift */,
+				7B6753FF25C01CC200C1D44F /* PostCommentCollectionViewCell.swift */,
+			);
+			path = "动态详情";
 			sourceTree = "<group>";
 		};
 		D0D22CEE25BBE426005DFE53 = {
@@ -123,17 +187,19 @@
 		D0D22CF925BBE426005DFE53 /* Date10 */ = {
 			isa = PBXGroup;
 			children = (
+				7B6753A225BFF60400C1D44F /* images */,
 				D0D22D3D25BF2862005DFE53 /* utils */,
 				D0D22D3525BF1D6F005DFE53 /* DataModal */,
-				7B67537325BF138D00C1D44F /* 我们 */,
 				7B67535925BF077600C1D44F /* 首页 */,
 				7B67536C25BF118D00C1D44F /* 消息 */,
+				7B67537325BF138D00C1D44F /* 我们 */,
+				7B67537E25BFBA3600C1D44F /* 我 */,
+				7B6753F925C01BED00C1D44F /* 动态详情 */,
 				D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */,
 				D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */,
 				D0D22CFE25BBE426005DFE53 /* ViewController.swift */,
 				D0D22D0025BBE426005DFE53 /* Main.storyboard */,
 				7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */,
-				7BF219FD25BE64C200CC401E /* NewsDetailViewController.swift */,
 				7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */,
 				7B5E8EC025BD1E6700C03235 /* AddNewsViewController.swift */,
 				D0D22D0625BBE429005DFE53 /* Assets.xcassets */,
@@ -162,6 +228,7 @@
 		D0D22D3D25BF2862005DFE53 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				7B67539825BFF2B700C1D44F /* GXBanner */,
 				D0D22D3E25BF289C005DFE53 /* DateUtil.swift */,
 			);
 			path = utils;
@@ -225,7 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D22D0A25BBE429005DFE53 /* LaunchScreen.storyboard in Resources */,
+				7B6753A825BFF65E00C1D44F /* banner1.jpeg in Resources */,
+				7B6753A725BFF65E00C1D44F /* banner2.jpeg in Resources */,
 				D0D22D0725BBE429005DFE53 /* Assets.xcassets in Resources */,
+				7B6753A625BFF65E00C1D44F /* banner0.jpeg in Resources */,
 				D0D22D0225BBE426005DFE53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,7 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5E8ECC25BDA70B00C03235 /* News.swift in Sources */,
-				7B67536825BF09FB00C1D44F /* NewsCollectionViewCell.swift in Sources */,
+				7B6753FD25C01C5200C1D44F /* PostDetailViewController.swift in Sources */,
+				7B67536825BF09FB00C1D44F /* IndexPostCollectionViewCell.swift in Sources */,
 				7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */,
 				D0D22D2F25BF1B4D005DFE53 /* Food.swift in Sources */,
 				D0D22D3F25BF289C005DFE53 /* DateUtil.swift in Sources */,
@@ -247,18 +318,23 @@
 				7B67536E25BF11CA00C1D44F /* MessageViewController.swift in Sources */,
 				D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */,
 				7B67537125BF121400C1D44F /* MessageCollectionViewCell.swift in Sources */,
+				7B67539F25BFF37C00C1D44F /* GXBannerCell.swift in Sources */,
+				7B67539E25BFF37C00C1D44F /* GXBannerFlowLayout.swift in Sources */,
+				7B67540025C01CC200C1D44F /* PostCommentCollectionViewCell.swift in Sources */,
+				7B6753AF25BFF7EB00C1D44F /* ButtonCollectionViewCell.swift in Sources */,
+				7B67538125BFBA8500C1D44F /* MeViewController.swift in Sources */,
+				7B67537C25BFAFB300C1D44F /* WePostCollectionViewCell.swift in Sources */,
 				7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */,
 				7B67537625BF154800C1D44F /* WeViewController.swift in Sources */,
 				7B5E8EC125BD1E6700C03235 /* AddNewsViewController.swift in Sources */,
 				D0D22D3825BF26CE005DFE53 /* User.swift in Sources */,
-				7BF219FE25BE64C200CC401E /* NewsDetailViewController.swift in Sources */,
 				D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */,
+				7B6753AB25BFF79D00C1D44F /* IndexViewController.swift in Sources */,
 				D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */,
 				D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */,
 				D0D22D3225BF1D24005DFE53 /* Comment.swift in Sources */,
 				D0D22D2B25BEAA0A005DFE53 /* Communication.swift in Sources */,
-				D0D22D2125BDB3B4005DFE53 /* ButtonCollectionViewCell.swift in Sources */,
-				D0D22D1825BD9974005DFE53 /* IndexViewController.swift in Sources */,
+				7B67539D25BFF37C00C1D44F /* GXBanner.swift in Sources */,
 				D059443C25BF4AE200BD068E /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

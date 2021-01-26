@@ -99,44 +99,44 @@ class NewsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        super.prepare(for: segue, sender: sender)
-        switch (segue.identifier ?? "") {
-        case "showDetail":
-            guard let newsDetailViewController = segue.destination as? NewsDetailViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            guard let selectedCell = sender as? NewsTableViewCell else{
-                fatalError("Unexpected sender:\(String(describing: sender))")
-            }
-            
-            guard let indexPath = tableView.indexPath(for: selectedCell) else {
-                fatalError("The selected cell is not being displayed by the table")
-            }
-            let selectedNews = news[indexPath.row]
-            newsDetailViewController.news = selectedNews
-            
-        case "addNews":
-            os_log("Adding new news", log: OSLog.default, type: .debug)
-        default:
-            fatalError("Unexpected Segue identifier: \(String(describing: segue.identifier))")
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//        super.prepare(for: segue, sender: sender)
+//        switch (segue.identifier ?? "") {
+//        case "showDetail":
+//            guard let newsDetailViewController = segue.destination as? NewsDetailViewController else {
+//                fatalError("Unexpected destination: \(segue.destination)")
+//            }
+//
+//            guard let selectedCell = sender as? NewsTableViewCell else{
+//                fatalError("Unexpected sender:\(String(describing: sender))")
+//            }
+//
+//            guard let indexPath = tableView.indexPath(for: selectedCell) else {
+//                fatalError("The selected cell is not being displayed by the table")
+//            }
+//            let selectedNews = news[indexPath.row]
+//            newsDetailViewController.news = selectedNews
+//
+//        case "addNews":
+//            os_log("Adding new news", log: OSLog.default, type: .debug)
+//        default:
+//            fatalError("Unexpected Segue identifier: \(String(describing: segue.identifier))")
+//        }
+//    }
     
     //MARK: Actions
-    @IBAction func unwindToNewsList(sender: UIStoryboardSegue){
-        if let sourceViewController = sender.source as? AddNewsViewController, let addedNews = sourceViewController.addedNews{
-            let newIndexPath = IndexPath(row: news.count, section: 0)
-            news.append(addedNews)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-        }
-        else if let sourceViewController = sender.source as? NewsDetailViewController, let selectedNews = sourceViewController.news, let selectedIndexPath = tableView.indexPathForSelectedRow{
-            news[selectedIndexPath.row] = selectedNews
-            tableView.reloadRows(at: [selectedIndexPath], with: .none)
-        }
-    }
+//    @IBAction func unwindToNewsList(sender: UIStoryboardSegue){
+//        if let sourceViewController = sender.source as? AddNewsViewController, let addedNews = sourceViewController.addedNews{
+//            let newIndexPath = IndexPath(row: news.count, section: 0)
+//            news.append(addedNews)
+//            tableView.insertRows(at: [newIndexPath], with: .automatic)
+//        }
+//        else if let sourceViewController = sender.source as? NewsDetailViewController, let selectedNews = sourceViewController.news, let selectedIndexPath = tableView.indexPathForSelectedRow{
+//            news[selectedIndexPath.row] = selectedNews
+//            tableView.reloadRows(at: [selectedIndexPath], with: .none)
+//        }
+//    }
 
 }

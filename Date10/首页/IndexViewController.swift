@@ -39,16 +39,16 @@ class IndexViewController: UIViewController {
 //        cell.textLabel?.text = self.news[indexPath.row]
 //        return cell
 //    }
-//    
+//
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1
 //    }
-//    
+//
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        print(self.news.count)
 //        return self.news.count
 //    }
-//    
+//
 //}
 
 extension IndexViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -61,6 +61,4 @@ extension IndexViewController: UICollectionViewDataSource, UICollectionViewDeleg
         cell.label.text = news[indexPath.row]
         return cell
     }
-    
-    
 }
