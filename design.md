@@ -46,7 +46,7 @@ class Post{
 ### 1.4 相关代码
 
 - `IndexViewController.swift`：实现页面相关
-- `NewsTableViewCell.swift`：展示动态的卡片
+- `PostTableViewCell.swift`：展示动态的卡片
 - `ButtonCollectionViewCell.swift`：分类导航的按钮
 
 
@@ -135,7 +135,7 @@ class Post { // 同首页中的动态定义
 ### 3.4 相关代码
 
 - `Couple.swift`：情侣的定义
-- `NewsTableViewController`
+- `PostTableViewController`
 
 
 
@@ -186,11 +186,12 @@ class User {
 
 ### 5.1 页面布局
 
-![image-20210125202944009](D:\github\Date10\design.assets\image-20210125202944009.png)
+![image-20210126190502513](D:\github\Date10\design.assets\image-20210126190502513.png)
 
 ### 5.2 功能简述
 
-展示一条动态的详细信息
+- 展示一条动态的详细信息
+- 发表评论
 
 ### 5.3 数据接口
 
@@ -222,8 +223,8 @@ class PostComment {
 ### 5.4 相关代码
 
 - `Comment.swift`
-- `News.swift`
-- `NewsDetailViewController.swift`
+- `Post.swift`
+- `PostDetailViewController.swift`
 
 ### 5.5 跳转描述
 
@@ -272,59 +273,174 @@ class Food {
 
 ### 7.1 页面布局
 
+![image-20210126182625359](D:\github\Date10\design.assets\image-20210126182625359.png)
+
 ### 7.2 功能简述
+
+- 展示所有景点信息
+- 搜索
 
 ### 7.3 数据接口
 
+```swift
+class Spot {
+    var name : String
+    var hotValue : Int
+    var shortComment : String
+    var frontImg : UIImage
+   	var images = [UIImage]()
+    var comments = [SpotComment]()
+    var score : Float
+}
+```
+
+
+
 ### 7.4 相关代码
+
+- `Spot.swift`
 
 ### 7.5 跳转描述
 
+点击具体的景点跳转到[景点详情页](#8 景点详情页)
 
-
-## 8 地点详情页
+## 8 景点详情页
 
 ### 8.1 页面布局
 
+![image-20210126183459221](D:\github\Date10\design.assets\image-20210126183459221.png)
+
 ### 8.2 功能简述
 
+- 景点评价发布
+- 展示景点详情
+
 ### 8.3 数据接口
+
+```swift
+class SpotComment {
+    var commenter : String
+    var date : Date
+    var likes : Int
+    var content : String
+    var images = [UIImage]()
+}
+
+class Spot { // 同7.3
+    
+}
+```
+
+
 
 ### 8.4 相关代码
 
 ### 8.5 跳转描述
 
-
+暂无
 
 ## 9 动态发布页
 
 ### 9.1 页面布局
 
+![image-20210126190438546](D:\github\Date10\design.assets\image-20210126190438546.png)
+
 ### 9.2 功能简述
 
+- 发表一条动态：包括动态的文字描述、图片、地点
+
 ### 9.3 数据接口
+
+```swift
+class Post { 
+    var content : String
+    var poster : String
+    var images = [UIImage]()
+    var address : String
+}
+```
+
+
 
 ### 9.4 相关代码
 
 ### 9.5 跳转描述
 
-## 10 地点详情页
+1. 点击发布or取消后都会跳转回上一页面
+2. 点击图片输入后会跳转到选择图片的页面
+
+## 10 美食详情页
 
 ### 10.1 页面布局
 
+![image-20210126190053942](D:\github\Date10\design.assets\image-20210126190053942.png)
+
 ### 10.2 功能简述
+
+- 展示美食的详细信息
+
+- 给美食下的评论点赞
+- 发表对当前美食的评论
 
 ### 10.3 数据接口
 
+```swift
+class FoodComment {
+    var likes : Int
+    var date : Date
+    var content : String
+    var commenter : String
+    var score : Int
+}
+class Food{
+    var images = [UIImage]()
+    var comments = [FoodComment]()
+    var name : String
+    var score : Float
+}
+```
+
+
+
 ### 10.4 相关代码
+
+
 
 ### 10.5 跳转描述
 
+1. 点击发布后跳转到[评价发布页](11 评价发布页)
+
+   
+
+## 11 评价发布页
+
+### 11.1 页面布局
+
+![image-20210126190153449](D:\github\Date10\design.assets\image-20210126190153449.png)
+
+### 11.2 功能简述
+
+发布评价
+
+### 11.3 数据接口
+
+```swift
+class FoodComment {
+    
+}
+
+class SpotComment {
+    
+}
+```
 
 
 
+### 11.4 相关代码
 
+### 11.5 跳转描述
 
+点击取消or发布都会跳转回上一页面
 
 ## 暂无
 
