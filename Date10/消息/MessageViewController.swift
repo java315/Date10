@@ -43,7 +43,7 @@ extension MessageViewController : UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MessageCollectionViewCell", for: indexPath) as! MessageCollectionViewCell
+        let cell = messageCollection.dequeueReusableCell(withReuseIdentifier: "MessageCollectionViewCell", for: indexPath) as! MessageCollectionViewCell
         let m = communications[indexPath.row].getLeastMessage()
         cell.message.text = m?.content
         cell.time.text = DateUtil.ZoneTime(date: (m?.sendTime)!, dateFormat: DateUtil.FullTimeFormat)

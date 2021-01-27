@@ -64,7 +64,7 @@ extension FoodViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = foodCollection.dequeueReusableCell(withReuseIdentifier: "FoodCollectionCell", for: indexPath) as! SpotCollectionViewCell
+        let cell = foodCollection.dequeueReusableCell(withReuseIdentifier: "FoodCollectionViewCell", for: indexPath) as! FoodCollectionViewCell
         let food = foods[indexPath.row]
         cell.frontImg.image = food.frontImg
         cell.nameLabel.text = food.name

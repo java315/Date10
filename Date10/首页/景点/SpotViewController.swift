@@ -62,7 +62,7 @@ extension SpotViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = spotCollection.dequeueReusableCell(withReuseIdentifier: "SpotCollectionCell", for: indexPath) as! SpotCollectionViewCell
+        let cell = spotCollection.dequeueReusableCell(withReuseIdentifier: "SpotCollectionViewCell", for: indexPath) as! SpotCollectionViewCell
         let spot = spots[indexPath.row]
         cell.frontImg.image = spot.frontImg
         cell.nameLabel.text = spot.name
