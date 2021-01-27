@@ -216,13 +216,15 @@ class GlobalData {
     }
     
     public func getCouple(_ user : User) -> Couple? {
-        for couple in Couples {
-            if user.sex! {
+        if user.sex! {
+            for couple in Couples {
                 if user.name == couple.boy {
                     return couple
                 }
             }
-            else {
+        }
+        else {
+            for couple in Couples {
                 if user.name == couple.girl {
                     return couple
                 }
@@ -236,10 +238,13 @@ class GlobalData {
         guard cp != nil else {
             return nil
         }
-        
+        return getCouplePosts(cp!)
+    }
+    
+    public func getCouplePosts(_ couple : Couple) -> [Post]{
         var posts : [Post] = []
-        posts += getUserPosts(getUser(cp!.boy)!)
-        posts += getUserPosts(getUser(cp!.girl)!)
+        posts += getUserPosts(getUser(couple.boy)!)
+        posts += getUserPosts(getUser(couple.girl)!)
         // 不确定是日期升序还是降序
         posts.sort(){DateUtil.compareDate(date1: $0.postDate, date2: $1.postDate) > 0}
         return posts
