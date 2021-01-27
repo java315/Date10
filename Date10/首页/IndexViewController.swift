@@ -48,6 +48,7 @@ class IndexViewController: UIViewController {
 
 extension IndexViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(collectionView)
         switch collectionView.restorationIdentifier! {
             case "ButtonCollection":
                 return button.count

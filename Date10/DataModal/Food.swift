@@ -13,9 +13,9 @@ class Food {
     var averagePrice : Float
     var address : String?
     var shortComment : String?
-    private var frontImg : UIImage?
-    private var images = [UIImage]()
-    private var comments = [FoodComment]()
+    var frontImg : UIImage?
+    var images = [UIImage]()
+    var comments = [FoodComment]()
     
     init?(name:String) {
         guard !name.isEmpty else {

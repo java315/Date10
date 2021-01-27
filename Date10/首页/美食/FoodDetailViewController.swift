@@ -12,6 +12,8 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var banner: GXBanner!
     @IBOutlet weak var commentCollection: UICollectionView!
+    
+    var food: Food!
     override func viewDidLoad() {
         super.viewDidLoad()
 

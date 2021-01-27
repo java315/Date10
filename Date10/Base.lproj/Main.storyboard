@@ -24,7 +24,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Da1-im-D8c">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="ButtonCollection" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Da1-im-D8c">
                                 <rect key="frame" x="0.0" y="144" width="414" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -84,7 +84,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-e6-itz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="PostCollection" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-e6-itz">
                                 <rect key="frame" x="0.0" y="344" width="414" height="469"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RTc-F4-XJF">
@@ -94,7 +94,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Dy-Jm-fse" customClass="IndexPostCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCollectionViewCell" id="1Dy-Jm-fse" customClass="IndexPostCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="283"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8TD-QG-6ux">
@@ -107,11 +107,6 @@
                                                         <constraint firstAttribute="width" secondItem="RUM-ol-Adb" secondAttribute="height" multiplier="1:1" id="2Qe-Po-IrN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-YC-9sh">
-                                                    <rect key="frame" x="8" y="203" width="184" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JOb-Cd-Q9R">
                                                     <rect key="frame" x="120.5" y="248" width="74.5" height="25"/>
                                                     <subviews>
@@ -126,16 +121,23 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zG-nf-T8j">
+                                                    <rect key="frame" x="5" y="200" width="190" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UxL-YC-9sh" firstAttribute="leading" secondItem="8TD-QG-6ux" secondAttribute="leading" constant="8" id="6LI-LM-Hoc"/>
-                                                <constraint firstAttribute="trailing" secondItem="UxL-YC-9sh" secondAttribute="trailing" constant="8" id="9LB-VP-Biq"/>
                                                 <constraint firstItem="RUM-ol-Adb" firstAttribute="leading" secondItem="8TD-QG-6ux" secondAttribute="leading" constant="5" id="OdS-Np-HTU"/>
-                                                <constraint firstItem="UxL-YC-9sh" firstAttribute="top" secondItem="RUM-ol-Adb" secondAttribute="bottom" constant="8" id="QyY-6y-yEL"/>
+                                                <constraint firstItem="6zG-nf-T8j" firstAttribute="leading" secondItem="8TD-QG-6ux" secondAttribute="leading" constant="5" id="c0N-Y1-j6O"/>
                                                 <constraint firstAttribute="trailing" secondItem="RUM-ol-Adb" secondAttribute="trailing" constant="5" id="cVo-6q-RLI"/>
                                                 <constraint firstItem="RUM-ol-Adb" firstAttribute="top" secondItem="8TD-QG-6ux" secondAttribute="top" constant="5" id="eIt-Jl-YVg"/>
                                                 <constraint firstAttribute="bottom" secondItem="JOb-Cd-Q9R" secondAttribute="bottom" constant="10" id="i6B-em-ECB"/>
                                                 <constraint firstAttribute="trailing" secondItem="JOb-Cd-Q9R" secondAttribute="trailing" constant="5" id="mEP-AC-jfO"/>
+                                                <constraint firstAttribute="trailing" secondItem="6zG-nf-T8j" secondAttribute="trailing" constant="5" id="ogb-3Y-hjx"/>
+                                                <constraint firstItem="6zG-nf-T8j" firstAttribute="top" secondItem="RUM-ol-Adb" secondAttribute="bottom" constant="5" id="v1v-EQ-nva"/>
+                                                <constraint firstItem="6zG-nf-T8j" firstAttribute="bottom" secondItem="JOb-Cd-Q9R" secondAttribute="top" constant="-5" id="wTN-25-D3x"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="200" height="283"/>
@@ -143,7 +145,7 @@
                                             <outlet property="frontImg" destination="RUM-ol-Adb" id="QrO-qU-lQk"/>
                                             <outlet property="likeImg" destination="YLC-CN-Leh" id="lQL-CF-dbx"/>
                                             <outlet property="likeNumber" destination="ErN-EQ-gDT" id="eLr-85-1GW"/>
-                                            <outlet property="title" destination="UxL-YC-9sh" id="yIr-Xm-jM3"/>
+                                            <outlet property="title" destination="6zG-nf-T8j" id="icV-QZ-fcC"/>
                                             <segue destination="uIG-TN-hDc" kind="show" id="NBh-UJ-EgA"/>
                                         </connections>
                                     </collectionViewCell>
@@ -800,7 +802,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="z2s-gc-MT7" customClass="FoodCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FoodCollectionViewCell" id="z2s-gc-MT7" customClass="FoodCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gyt-Q3-N3y">
@@ -908,7 +910,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="U5D-h2-eFh"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="FoodCollection" destination="9go-mI-BNW" id="Jwr-fM-Mo2"/>
+                        <outlet property="foodCollection" destination="9go-mI-BNW" id="8ek-rF-smz"/>
                         <outlet property="searchBar" destination="YB2-HA-cea" id="MzY-32-cfw"/>
                     </connections>
                 </viewController>
@@ -1114,7 +1116,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uzh-Gh-iah">
                                 <rect key="frame" x="10" y="471.5" width="394" height="72.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7G7-iq-mrI">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7G7-iq-mrI">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="72.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -1150,7 +1152,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5tf-pV-3OE" customClass="PostCommentCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCommentCell" id="5tf-pV-3OE" customClass="PostCommentCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="70T-Ho-qyF">
@@ -1237,8 +1239,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="394" height="100"/>
                                         <connections>
-                                            <outlet property="commentorAvatar" destination="BSG-g8-DmS" id="iua-5W-RhF"/>
-                                            <outlet property="commentorNameLabel" destination="nOJ-fN-9Lv" id="Cun-3n-Nzh"/>
+                                            <outlet property="commenterAvatar" destination="BSG-g8-DmS" id="35q-VM-Tuh"/>
+                                            <outlet property="commenterNameLabel" destination="nOJ-fN-9Lv" id="Z5R-eU-SQb"/>
                                             <outlet property="content" destination="bwX-JJ-1dE" id="hyF-zm-niI"/>
                                             <outlet property="dateLabel" destination="2qs-en-YVv" id="5vp-Yf-KnW"/>
                                             <outlet property="likeImage" destination="1I9-q3-q1S" id="q8c-VY-adY"/>
@@ -1273,6 +1275,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="6Rm-0N-p8G" id="c96-yw-eKk"/>
                         <outlet property="banner" destination="zdf-Fj-fcf" id="tf2-7H-Ep0"/>
+                        <outlet property="commentCollection" destination="RAO-UX-kVf" id="rfk-uO-uXy"/>
                         <outlet property="content" destination="7G7-iq-mrI" id="l5Z-cS-g6a"/>
                         <outlet property="postDateLabel" destination="u8T-su-jhk" id="cQt-Sh-gka"/>
                         <outlet property="posterAvatar" destination="9Pv-Gz-tUb" id="ch2-cL-31j"/>
