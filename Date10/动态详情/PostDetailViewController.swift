@@ -81,8 +81,6 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.likeNumber.text = String(comment.likes)
         return cell
     }
-    
-    
 }
 
 extension PostDetailViewController: GXBannerDelegate, GXBannerDataSource{
