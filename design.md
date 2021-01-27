@@ -10,7 +10,7 @@ Date10 设计文档
 
 ### 1.1 页面布局
 
-![image-20210125195254366](D:\github\Date10\design.assets\image-20210125195254366.png)
+![image-20210125195254366](design.assets/image-20210125195254366.png)
 
 ### 1.2 功能简述
 
@@ -22,7 +22,7 @@ Date10 设计文档
 
 **动态展示的卡片示意**
 
-<img src="D:\github\Date10\design.assets\Screenshot_20210125_164051_com.dianping.v1.jpg" alt="Screenshot_20210125_164051_com.dianping.v1" style="zoom: 25%;" />
+![](design.assets/Screenshot_20210125_164051_com.dianping.v1.jpg)
 
 ### 1.3 数据接口
 
@@ -60,7 +60,7 @@ class Post{
 
 ### 2.1 页面布局
 
-<img src="D:\github\Date10\design.assets\image-20210125195311513.png" alt="image-20210125195311513"  />
+<img src="design.assets/image-20210125195311513.png" alt="image-20210125195311513"  />
 
 ### 2.2 功能简述
 
@@ -105,7 +105,7 @@ class Communication {
 
 ### 3.1 页面布局
 
-![image-20210125195341448](D:\github\Date10\design.assets\image-20210125195341448.png)
+![image-20210125195341448](design.assets/image-20210125195341448.png)
 
 ### 3.2 功能简述
 
@@ -151,7 +151,7 @@ class Post { // 同首页中的动态定义
 
 ### 4.1 页面布局
 
-![image-20210125195357520](D:\github\Date10\design.assets\image-20210125195357520.png)
+![image-20210125195357520](design.assets/image-20210125195357520.png)
 
 ### 4.2 功能简述
 
@@ -186,7 +186,7 @@ class User {
 
 ### 5.1 页面布局
 
-![image-20210126190502513](D:\github\Date10\design.assets\image-20210126190502513.png)
+![image-20210126190502513](design.assets/image-20210126190502513.png)
 
 ### 5.2 功能简述
 
@@ -237,7 +237,7 @@ class PostComment {
 
 ### 6.1 页面布局
 
-![image-20210125203000604](D:\github\Date10\design.assets\image-20210125203000604.png)
+![image-20210125203000604](design.assets/image-20210125203000604.png)
 
 ### 6.2 功能简述
 
@@ -275,7 +275,7 @@ class Food {
 
 ### 7.1 页面布局
 
-![image-20210126182625359](D:\github\Date10\design.assets\image-20210126182625359.png)
+![image-20210126182625359](design.assets/image-20210126182625359.png)
 
 ### 7.2 功能简述
 
@@ -313,7 +313,7 @@ class Spot {
 
 ### 8.1 页面布局
 
-![image-20210126183459221](D:\github\Date10\design.assets\image-20210126183459221.png)
+![image-20210126183459221](design.assets/image-20210126183459221.png)
 
 ### 8.2 功能简述
 
@@ -352,7 +352,7 @@ class Spot { // 同7.3
 
 ### 9.1 页面布局
 
-![image-20210126190438546](D:\github\Date10\design.assets\image-20210126190438546.png)
+![image-20210126190438546](design.assets/image-20210126190438546.png)
 
 ### 9.2 功能简述
 
@@ -385,7 +385,7 @@ class Post {
 
 ### 10.1 页面布局
 
-![image-20210126190053942](D:\github\Date10\design.assets\image-20210126190053942.png)
+![image-20210126190053942](design.assets/image-20210126190053942.png)
 
 ### 10.2 功能简述
 
@@ -429,7 +429,7 @@ class Food{
 
 ### 11.1 页面布局
 
-![image-20210126190153449](D:\github\Date10\design.assets\image-20210126190153449.png)
+![image-20210126190153449](design.assets/image-20210126190153449.png)
 
 ### 11.2 功能简述
 
