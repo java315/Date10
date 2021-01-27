@@ -11,6 +11,8 @@ class WePostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var frontImg: UIImageView!
     @IBOutlet weak var posterAvatar: UIImageView!
     @IBOutlet weak var posterName: UILabel!
+    @IBOutlet weak var likeImg: UIImageView!
+    @IBOutlet weak var likeNumber: UILabel!
     @IBOutlet weak var title: UITextView!
     
 }

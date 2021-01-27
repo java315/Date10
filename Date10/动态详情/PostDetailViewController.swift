@@ -15,6 +15,8 @@ class PostDetailViewController: UIViewController {
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
+    @IBOutlet weak var likeImageView: UIImageView!
+    @IBOutlet weak var likeNumber: UILabel!
     @IBOutlet weak var commentCollection: UICollectionView!
     
     var post:Post!
@@ -32,6 +34,9 @@ class PostDetailViewController: UIViewController {
         content.text = post.content
         addressLabel.text = post.address
         postDateLabel.text = DateUtil.ZoneTime(date: post.postDate, dateFormat: "MM-dd HH:mm:ss")
+        
+        likeImageView.image = post.liked ? likeImg : unlikeImg
+        likeNumber.text = String(post.likes)
         
         self.banner.backgroundColor = .gray
         self.banner.autoTimeInterval = 3.0

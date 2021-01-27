@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessageCollectionViewCell: UICollectionViewCell {
+class MessageCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var senderAvatar: UIImageView!
     @IBOutlet weak var senderName: UILabel!
     @IBOutlet weak var message: UITextView!
@@ -16,6 +16,7 @@ class MessageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        message.delegate = self
     }
 
 }

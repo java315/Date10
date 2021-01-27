@@ -10,7 +10,7 @@ import UIKit
 class AddPostViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var visiablitySwitch: UISwitch!
-    @IBOutlet weak var imageCollection: UICollectionView!
+    @IBOutlet weak var banner: GXBanner!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var addedPost: Post!
@@ -26,8 +26,13 @@ class AddPostViewController: UIViewController, UITextViewDelegate{
         textView.textColor = UIColor.lightGray
         self.imagePicker = SJImagePickerController(delegate: self)
         self.imagePicker.maximumSelectedPhotoCount = 9
-        imageCollection.delegate = self
-        imageCollection.dataSource = self
+        
+        self.banner.backgroundColor = .none
+        self.banner.autoTimeInterval = 3.0
+        self.banner.dataSource = self
+        self.banner.delegate = self
+        self.banner.register(classCellType: GXBannerCell.self)
+        self.banner.reloadData()
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -43,12 +48,12 @@ class AddPostViewController: UIViewController, UITextViewDelegate{
             textView.text = "分享你和 ta 的生活..."
             textView.textColor = UIColor.lightGray
         }
-//        if imageView.image == nil && textView.text.isEmpty{
-//            saveButton.isEnabled = false
-//        }
-//        else{
-//            saveButton.isEnabled = true
-//        }
+        if images.isEmpty{
+            saveButton.isEnabled = false
+        }
+        else{
+            saveButton.isEnabled = true
+        }
         return true
     }
     
@@ -71,25 +76,28 @@ class AddPostViewController: UIViewController, UITextViewDelegate{
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
             return
         }
-//        let text = textView.text!
-//        let photo = imageView.image
-//        let visiable = visiablitySwitch.isOn
+        let text = textView.text!
+        let visiable = visiablitySwitch.isOn
+        let globalData = GlobalData.getInstance()
         
-//        addedNews = News(text: text, photo: photo, visiable: visiable)
+        addedPost = Post(poster: globalData.getCurrentUser()!.name, title: text, content: text, isPublic: visiable, address: "", liked: nil)
+        addedPost.addImages(images: images)
     }
 
 }
 
-extension AddPostViewController: UICollectionViewDelegate, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension AddPostViewController: GXBannerDelegate, GXBannerDataSource{
+    func numberOfItems() -> Int {
         return images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imageCollection.dequeueReusableCell(withReuseIdentifier: "AddImageCollectionViewCell", for: indexPath) as! AddImageCollectionViewCell
-        cell.imageView.image = images[indexPath.row]
-        print("load \(indexPath.row)")
-        return cell
+    func banner(_ banner: GXBanner, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell: GXBannerCell = banner.dequeueReusableCell(for: indexPath)
+            cell.contentView.layer.masksToBounds = true
+            cell.contentView.layer.cornerRadius = 10
+            cell.iconIView.image = images[indexPath.row]
+            
+            return cell
     }
     
     
@@ -99,13 +107,11 @@ extension AddPostViewController: SJImagePickerControllerDelegate{
     func imagePickerController(_ picker: SJImagePickerController, didFinishPickingMediaWithInfo info: [SJImagePickerController.InfoKey : Any]){
         dismiss(animated: true, completion: nil)
         images = info[.exportImage] as! [UIImage]
-        var ip = [IndexPath]()
-        for i in 0...images.count{
-            ip.append(IndexPath(row: i, section: 0))
+        banner.reloadData()
         }
-        self.imageCollection.reloadData()
-    }
+    
     func imagePickerControllerDidCancel(_ picker: SJImagePickerController){
         dismiss(animated: true, completion: nil)
+        images = []
     }
 }
