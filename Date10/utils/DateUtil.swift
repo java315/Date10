@@ -7,7 +7,7 @@
 
 import Foundation
 class DateUtil {
-    static var FullDateFormat = "YYY-MM-dd HH:mm:ss"
+    static var FullDateFormat = "YYYY-MM-dd HH:mm:ss"
     static var FullTimeFormat = "HH:mm:ss"
     // 获取当前系统时间（String类型的GMT时间）
     static func currentTime(dateFormat : String?) -> String {

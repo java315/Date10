@@ -167,7 +167,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="buttonCollection" destination="Da1-im-D8c" id="Wuw-JQ-tSa"/>
-                        <outlet property="newsCollection" destination="a5Q-e6-itz" id="nzU-Y2-v66"/>
+                        <outlet property="postCollection" destination="a5Q-e6-itz" id="zVq-fU-eQR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="el8-tX-C2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1352,10 +1352,10 @@
             </objects>
             <point key="canvasLocation" x="-713.04347826086962" y="566.51785714285711"/>
         </scene>
-        <!--美食详情-->
+        <!--景点详情-->
         <scene sceneID="rrx-VX-CGw">
             <objects>
-                <viewController title="美食详情" id="4rU-0R-dX2" sceneMemberID="viewController">
+                <viewController title="景点详情" id="4rU-0R-dX2" customClass="SpotDetailViewController" customModule="Date10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gja-jl-I5J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1382,7 +1382,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RkG-MP-ml4">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SpotCommentCell" id="RkG-MP-ml4" customClass="SpotDetailCommentCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yHQ-Zo-X1o">
@@ -1469,6 +1469,14 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="398" height="100"/>
+                                        <connections>
+                                            <outlet property="commentAvater" destination="Fk1-Aa-uat" id="wxI-BS-Wk3"/>
+                                            <outlet property="commenterName" destination="iau-Mf-UzG" id="mme-78-BLJ"/>
+                                            <outlet property="content" destination="hqz-v6-qd9" id="q4l-QO-Rih"/>
+                                            <outlet property="date" destination="mdV-ux-Sv2" id="18y-Z4-UtI"/>
+                                            <outlet property="likeImg" destination="Mdx-Tb-bi4" id="HEJ-Y8-ehQ"/>
+                                            <outlet property="likeNumber" destination="Y5d-Us-5iY" id="S9O-pP-tMB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -1497,6 +1505,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xhY-fh-qC9"/>
+                    <connections>
+                        <outlet property="banner" destination="8tT-Ew-ZLh" id="HhL-rX-ACx"/>
+                        <outlet property="commentCollection" destination="lF3-g6-n4a" id="b12-Ul-AS4"/>
+                        <outlet property="nameLabel" destination="1oo-31-tnL" id="Wrt-pA-V6M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3F-jh-QkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1518,10 +1531,10 @@
             </objects>
             <point key="canvasLocation" x="-4320" y="2857"/>
         </scene>
-        <!--美食分类-->
+        <!--景点分类-->
         <scene sceneID="Id7-SH-tOr">
             <objects>
-                <viewController storyboardIdentifier="SpotViewController" title="美食分类" id="YJt-YN-S0o" customClass="SpotViewController" customModule="Date10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpotViewController" title="景点分类" id="YJt-YN-S0o" customClass="SpotViewController" customModule="Date10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BvA-XD-1Qx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1540,7 +1553,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mXx-GM-ZZX" customClass="SpotCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SpotCollectionCell" id="mXx-GM-ZZX" customClass="SpotCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xbg-of-azG">
@@ -1641,7 +1654,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hVa-hC-bpl"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="FoodCollection" destination="aUI-4u-YDW" id="9L4-AW-EHB"/>
                         <outlet property="searchBar" destination="nc1-ja-IQQ" id="jvx-gN-kQz"/>
                         <outlet property="spotCollection" destination="aUI-4u-YDW" id="eSm-kZ-KkK"/>
                     </connections>
