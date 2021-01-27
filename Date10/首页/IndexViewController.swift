@@ -8,7 +8,7 @@
 import UIKit
 
 class IndexViewController: UIViewController {
-    var button = ["美食","景点"]
+    var button = ["美食","景点","酒店","酒吧"]
     let likeImg = UIImage(named: "like")
     let unlikeImg = UIImage(named: "unlike")
     @IBOutlet weak var buttonCollection: UICollectionView!
