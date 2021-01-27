@@ -11,10 +11,13 @@ class MeViewController: UIViewController {
     @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var npyLabel: UILabel!
-    
+    var user : User?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        user = GlobalData.getInstance().getCurrentUser()
+        userAvatar.image = UIImage(named: "user")
+        userName.text = user?.name
+        npyLabel.text = user?.npy
         // Do any additional setup after loading the view.
     }
     

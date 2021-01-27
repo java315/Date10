@@ -31,6 +31,8 @@ class User : NSObject, NSCoding{
         self.avatar = avatar
         self.sex = sex
     }
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("user")
     
     required convenience init?(coder: NSCoder) {
         guard let name = coder.decodeObject(forKey: PropertyKey.name) as? String else {

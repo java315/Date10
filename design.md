@@ -6,7 +6,7 @@ Date10 设计文档
 
 >重点强调的是：**数据描述表示的不是数据模型的完整定义，而是在这个页面下可能会用到的数据**，数据模型的实现将严格按照数据描述中进行实现，数据接口内的描述也将持续更新
 
-## 1 首页
+## 1 首页√
 
 ### 1.1 页面布局
 
@@ -46,7 +46,7 @@ class Post{
 ### 1.4 相关代码
 
 - `IndexViewController.swift`：实现页面相关
-- `PostTableViewCell.swift`：展示动态的卡片
+- `IndexPostCollectionViewCell.swift`：展示动态的卡片
 - `ButtonCollectionViewCell.swift`：分类导航的按钮
 
 
@@ -56,7 +56,7 @@ class Post{
 1. 点击分类导航的按钮可以跳转到具体的分类页面：[美食分类](#6 美食分类)、[景点分类](#7 景点分类)
 2. 点击动态展示的某一条动态会跳转到具体的[动态详情页](#5 动态详情页)
 
-## 2 消息
+## 2 消息√
 
 ### 2.1 页面布局
 
@@ -101,7 +101,7 @@ class Communication {
 1. 点击具体的会话会跳转到[会话详情页](#暂无)
 2. 系统通知、收到的赞、新增粉丝暂时留空
 
-## 3 我们
+## 3 我们√
 
 ### 3.1 页面布局
 
@@ -147,7 +147,7 @@ class Post { // 同首页中的动态定义
 
    
 
-## 4 我
+## 4 我√
 
 ### 4.1 页面布局
 
@@ -182,7 +182,7 @@ class User {
 
 **暂时不做跳转**
 
-## 5 动态详情页
+## 5 动态详情页√
 
 ### 5.1 页面布局
 
@@ -225,6 +225,7 @@ class PostComment {
 - `Comment.swift`
 - `Post.swift`
 - `PostDetailViewController.swift`
+- `PostCommentCollectionViewCell.swift`:动态中评价的cell
 
 ### 5.5 跳转描述
 
@@ -232,7 +233,7 @@ class PostComment {
 
 
 
-## 6 美食分类
+## 6 美食分类√
 
 ### 6.1 页面布局
 
@@ -262,6 +263,7 @@ class Food {
 ### 6.4 相关代码
 
 - `FoodViewController.swift`
+- `FoodCollectionViewCell.swift`
 - `Food.swift`
 
 ### 6.5 跳转描述
@@ -269,7 +271,7 @@ class Food {
 1. 点击具体的美食后将跳转到[美食详情页](#10 美食详情页)
 
 
-## 7 景点分类
+## 7 景点分类√
 
 ### 7.1 页面布局
 
@@ -290,6 +292,7 @@ class Spot {
     var frontImg : UIImage
    	var images = [UIImage]()
     var comments = [SpotComment]()
+    //地点
     var score : Float
 }
 ```
@@ -299,12 +302,14 @@ class Spot {
 ### 7.4 相关代码
 
 - `Spot.swift`
+- `SpotViewController.swift`
+- `SpotCollectionViewCell.swift`
 
 ### 7.5 跳转描述
 
 点击具体的景点跳转到[景点详情页](#8 景点详情页)
 
-## 8 景点详情页
+## 8 景点详情页√
 
 ### 8.1 页面布局
 
@@ -336,6 +341,9 @@ class Spot { // 同7.3
 
 ### 8.4 相关代码
 
+* `SpotDetailViewController.swift`
+* `SpotDetailCommentCollectionViewCell.swift`
+
 ### 8.5 跳转描述
 
 暂无
@@ -365,12 +373,15 @@ class Post {
 
 ### 9.4 相关代码
 
+* `PostDetailViewController.swift`
+* `PostCommentCollectionViewCell.swift`
+
 ### 9.5 跳转描述
 
 1. 点击发布or取消后都会跳转回上一页面
 2. 点击图片输入后会跳转到选择图片的页面
 
-## 10 美食详情页
+## 10 美食详情页√
 
 ### 10.1 页面布局
 
@@ -405,7 +416,8 @@ class Food{
 
 ### 10.4 相关代码
 
-
+* `FoodDetailViewController.swift`
+* `FoodDetailCommentCollectionViewCell.swift`
 
 ### 10.5 跳转描述
 

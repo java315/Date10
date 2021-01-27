@@ -32,7 +32,14 @@ class Spot {
         self.score = 0.0
         
     }
+    func addComment(comment : SpotComment) {
+        self.comments.append(comment)
+        
+    }
     
+    func addComments(comments : [SpotComment]) {
+        self.comments += comments
+    }
     func addImages(images : [UIImage]) {
         if self.images.isEmpty {
             self.frontImg = images.first

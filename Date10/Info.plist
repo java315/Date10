@@ -64,5 +64,10 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>向动态中添加图片</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
 </dict>
 </plist>
