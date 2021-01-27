@@ -8,14 +8,17 @@
 import UIKit
 
 class MessageViewController: UIViewController {
-
+    var communications = [Communication]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadCommunications()
         // Do any additional setup after loading the view.
     }
     
-
+    private func loadCommunications() {
+        let globalData = GlobalData.getInstance()
+        self.communications = globalData.getAllCommunications()
+    }
     /*
     // MARK: - Navigation
 
@@ -26,4 +29,22 @@ class MessageViewController: UIViewController {
     }
     */
 
+}
+
+extension MessageViewController : UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return communications.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MessageCollectionViewCell", for: indexPath) as! MessageCollectionViewCell
+        let m = communications[indexPath.row].getLeastMessage()
+        cell.message.text = m?.content
+        cell.time.text = DateUtil.ZoneTime(date: (m?.sendTime)!, dateFormat: DateUtil.FullTimeFormat)
+        cell.senderName.text = m?.sender
+        cell.senderAvatar.image = UIImage(named: "user")
+        return cell
+    }
+    
+    
 }
