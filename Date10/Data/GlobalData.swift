@@ -211,6 +211,14 @@ class GlobalData {
         return self.user
     }
     
+    public func getSomeComments() -> [FoodComment] {
+        return self.FoodComments
+    }
+    
+    public func getSpots() -> [Spot] {
+        return self.Spots
+    }
+    
     public func getFoodComments() -> [FoodComment] {
         return self.FoodComments
     }
