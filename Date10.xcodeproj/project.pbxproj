@@ -51,7 +51,6 @@
 		7B67545425C1488C00C1D44F /* SJSelectedAlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67544225C1488C00C1D44F /* SJSelectedAlbumsView.swift */; };
 		7B67545525C1488C00C1D44F /* SJAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67544325C1488C00C1D44F /* SJAsset.swift */; };
 		7B67545E25C1542800C1D44F /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67545D25C1542800C1D44F /* AddPostViewController.swift */; };
-		7B67546525C1560300C1D44F /* AddImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67546425C1560300C1D44F /* AddImageCollectionViewCell.swift */; };
 		7BF219F625BDAE3B00CC401E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */; };
 		7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */; };
 		D059443C25BF4AE200BD068E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059443B25BF4AE200BD068E /* Post.swift */; };
@@ -122,7 +121,6 @@
 		7B67544225C1488C00C1D44F /* SJSelectedAlbumsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJSelectedAlbumsView.swift; sourceTree = "<group>"; };
 		7B67544325C1488C00C1D44F /* SJAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAsset.swift; sourceTree = "<group>"; };
 		7B67545D25C1542800C1D44F /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
-		7B67546425C1560300C1D44F /* AddImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BF219F525BDAE3B00CC401E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		7BF219F825BDB7B400CC401E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		D059443B25BF4AE200BD068E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 		7B67545725C153C600C1D44F /* 添加动态 */ = {
 			isa = PBXGroup;
 			children = (
-				7B67546425C1560300C1D44F /* AddImageCollectionViewCell.swift */,
 				7B67545D25C1542800C1D44F /* AddPostViewController.swift */,
 			);
 			path = "添加动态";
@@ -483,7 +480,6 @@
 				7BF219F925BDB7B400CC401E /* NewsTableViewController.swift in Sources */,
 				7B67537625BF154800C1D44F /* WeViewController.swift in Sources */,
 				D059444F25C05ECD00BD068E /* GlobalData.swift in Sources */,
-				7B67546525C1560300C1D44F /* AddImageCollectionViewCell.swift in Sources */,
 				D0D22D3825BF26CE005DFE53 /* User.swift in Sources */,
 				D0D22D2725BDCE8E005DFE53 /* Message.swift in Sources */,
 				7B67544925C1488C00C1D44F /* SJLoadingIndicator.swift in Sources */,

@@ -19,6 +19,8 @@ class WeViewController: UIViewController {
     var couple: Couple!
     var couplePosts = [Post]()
     let globalData = GlobalData.getInstance()
+    let likeImg = UIImage(named: "like")
+    let unlikeImg = UIImage(named: "unlike")
     
     
     override func viewDidLoad() {
@@ -34,7 +36,7 @@ class WeViewController: UIViewController {
         girlAvatar.image = girl?.avatar
         girlName.text = girl?.name
         
-        togetherTimeLabel.text = "在一起\(DateUtil.countDays(startDate: couple.startTime,endDate: Date()))啦！"
+        togetherTimeLabel.text = "在一起\(DateUtil.countDays(startDate: couple.startTime,endDate: Date())+1)天啦！"
         sweetValueLabel.text = "我们的甜蜜度为\(couple.sweetValue)"
         
         couplePostCollection.delegate = self
@@ -48,24 +50,37 @@ class WeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        super.prepare(for: segue, sender: sender)
-            guard let postDetailViewController = segue.destination as? PostDetailViewController else{
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            guard let selectedCell = sender as? WePostCollectionViewCell else{
-                fatalError("Unexpected sender:\(String(describing: sender))")
-            }
-            
-            guard let indexPath = couplePostCollection.indexPath(for: selectedCell) else{
-                fatalError("The selected cell is not being displayed by the collection")
-            }
-            
-            let selectedPost = couplePosts[indexPath.row]
-            postDetailViewController.post = selectedPost
+        switch segue.identifier{
+        case "showDetail":
+            super.prepare(for: segue, sender: sender)
+                guard let postDetailViewController = segue.destination as? PostDetailViewController else{
+                    fatalError("Unexpected destination: \(segue.destination)")
+                }
+                
+                guard let selectedCell = sender as? WePostCollectionViewCell else{
+                    fatalError("Unexpected sender:\(String(describing: sender))")
+                }
+                
+                guard let indexPath = couplePostCollection.indexPath(for: selectedCell) else{
+                    fatalError("The selected cell is not being displayed by the collection")
+                }
+                
+                let selectedPost = couplePosts[indexPath.row]
+                postDetailViewController.post = selectedPost
+        case "addPost":
+            print("addPost")
+        default:
+            fatalError()
+        }
     }
 
-
+    @IBAction func unwindToNewsList(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? AddPostViewController, let addedPost = sourceViewController.addedPost{
+            let newIndexPath = IndexPath(row: couplePosts.count, section: 0)
+            couplePosts.append(addedPost)
+            couplePostCollection.insertItems(at: [newIndexPath])
+        }
+    }
 }
 
 extension WeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -81,6 +96,8 @@ extension WeViewController: UICollectionViewDelegate, UICollectionViewDataSource
         cell.posterName.text = poster?.name
         cell.posterAvatar.image = poster?.avatar
         cell.title.text = post.title
+        cell.likeImg.image = post.liked ? likeImg : unlikeImg
+        cell.likeNumber.text = String(post.likes)
         
         return cell
     }
