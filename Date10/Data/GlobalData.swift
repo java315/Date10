@@ -132,7 +132,7 @@ class GlobalData {
     
     private func initMessages(){
         for _ in 0...40 {
-            self.Messages.append(Message(sender: RandomUtil.randomChoice(self.Users) as! String, content: RandomUtil.randomChoice(Constant.ShortComments), sendTime: DateUtil.randomDate())!)
+            self.Messages.append(Message(sender: RandomUtil.randomChoice(self.Users).name, content: RandomUtil.randomChoice(Constant.ShortComments), sendTime: DateUtil.randomDate())!)
         }
     }
     
