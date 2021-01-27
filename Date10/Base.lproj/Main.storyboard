@@ -25,10 +25,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="ButtonCollection" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Da1-im-D8c">
-                                <rect key="frame" x="0.0" y="144" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="3AS-hn-dvL"/>
+                                    <constraint firstAttribute="height" constant="100" id="3AS-hn-dvL"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KKJ-kh-e99">
                                     <size key="itemSize" width="128" height="128"/>
@@ -85,7 +85,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="PostCollection" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-e6-itz">
-                                <rect key="frame" x="0.0" y="344" width="414" height="469"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="569"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RTc-F4-XJF">
                                     <size key="itemSize" width="200" height="283"/>

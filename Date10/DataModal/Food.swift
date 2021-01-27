@@ -60,6 +60,10 @@ class Food {
         self.comments.append(comment)
         
     }
+    
+    func addComments(comments : [FoodComment]) {
+        self.comments += comments
+    }
     func getCommentsCount() -> Int {
         return self.comments.count
     }

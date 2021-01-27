@@ -40,12 +40,13 @@ class GlobalData {
         initAvatarUrls()
         initFoodImageUrls()
         initUsers()
+        initFoodComments()
         initCouples()
         initFoods()
         initPosts()
         initSpots()
         initUser()
-        initFoodComments()
+        
         initMessages()
         initCommunications()
         
@@ -73,6 +74,7 @@ class GlobalData {
             var f = Food(name: foodName, address: RandomUtil.randomChoice(Constant.Addresses), shortComment: RandomUtil.randomChoice(Constant.ShortComments))!
             f.addImages(images: randomChoiceImagesFromUrls(FoodImageUrls))
             print(f.images.count)
+            f.addComments(comments: getSomeComments())
             Foods.append(f)
             
         }
@@ -93,6 +95,7 @@ class GlobalData {
             Spots.append(Spot(name: spotName, address: RandomUtil.randomChoice(Constant.Addresses), shortComment: RandomUtil.randomChoice(Constant.ShortComments))!)
             // 加入图片
             Spots.last?.addImages(images: randomChoiceImagesFromUrls(FoodImageUrls))
+            
         }
     }
     
@@ -269,7 +272,11 @@ class GlobalData {
     }
     
     public func getSomeComments() -> [FoodComment] {
-        return self.FoodComments
+        var comments = [FoodComment]()
+        for _ in 1...10 {
+            comments.append(RandomUtil.randomChoice(FoodComments))
+        }
+        return comments
     }
     
     public func getSpots() -> [Spot] {

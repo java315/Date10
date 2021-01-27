@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreML
 
 class FoodDetailViewController: UIViewController {
 
@@ -20,9 +21,16 @@ class FoodDetailViewController: UIViewController {
     let likeImg = UIImage(named: "like")
     let unlikeImg = UIImage(named: "unlike")
     
+    var model : CommentClassify?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        do {
+            model = try CommentClassify.init(configuration: MLModelConfiguration())
+        }
+        catch {
+            
+        }
         self.images = food.images
         self.comments = food.comments
         self.nameLabel.text = food.name
@@ -54,6 +62,15 @@ extension FoodDetailViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.dateLabel.text = DateUtil.ZoneTime(date: comment.date, dateFormat: "MM-dd HH:mm:ss")
         cell.content.text = comment.content
         cell.likeImg.image = comment.liked ? likeImg : unlikeImg
+        do {
+            if let tag = try model?.prediction(text: comment.content).label {
+                cell.content.text = "[\(tag)]"+comment.content
+                print(tag)
+            }
+            
+        }catch {
+            
+        }
         cell.likeNumber.text = String(comment.likes)
         return cell
     }
@@ -69,7 +86,7 @@ extension FoodDetailViewController: GXBannerDelegate, GXBannerDataSource{
             cell.contentView.layer.masksToBounds = true
             cell.contentView.layer.cornerRadius = 10
             cell.iconIView.image = images[indexPath.row]
-            
+        
             return cell
     }
     
