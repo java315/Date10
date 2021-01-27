@@ -140,7 +140,7 @@ class GlobalData {
     }
     
     private func randomChoiceImagesFromUrls(_ urls : [String]) -> [UIImage] {
-        let count = RandomUtil.randomNumber(1, 9)
+        let count = RandomUtil.randomNumber(1, 3)
         var images = [UIImage]()
         for _ in 1...count {
             if let image = ImageUtil.getWebImage(RandomUtil.randomChoice(urls)) {

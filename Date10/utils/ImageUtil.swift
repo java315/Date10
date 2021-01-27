@@ -9,17 +9,19 @@ import Foundation
 import UIKit
 class ImageUtil {
     static func getWebImage(_ url:String) -> UIImage? {
+        /*
         do {
             guard let u = URL(string: url) else {
-                print("url is nil")
-                return nil
+                //print("url is nil")
+                return UIImage(named: "foodDefault")
             }
             let data = try Data(contentsOf: u)
             let img = UIImage(data: data)
             return img
         } catch {
             print(error)
-            return nil
-        }
+            return UIImage(named: "foodDefault")
+        }*/
+        return UIImage(named: "foodDefault")
     }
 }
