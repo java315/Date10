@@ -265,7 +265,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6Fg-zq-8uj" customClass="MessageCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MessageCollectionViewCell" id="6Fg-zq-8uj" customClass="MessageCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gEf-gS-jRQ">
@@ -330,6 +330,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="消息" id="lMa-gS-RmT"/>
+                    <connections>
+                        <outlet property="messageCollection" destination="ebr-NB-Cpc" id="hEd-Vh-WuX"/>
+                        <outlet property="searchBar" destination="JcE-7K-JNK" id="toh-T2-4NI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEG-zo-2CR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
