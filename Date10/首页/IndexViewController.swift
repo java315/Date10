@@ -34,15 +34,30 @@ class IndexViewController: UIViewController {
         }
         
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+            guard let postDetailViewController = segue.destination as? PostDetailViewController else{
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedCell = sender as? IndexPostCollectionViewCell else{
+                fatalError("Unexpected sender:\(String(describing: sender))")
+            }
+            
+            guard let indexPath = postCollection.indexPath(for: selectedCell) else{
+                fatalError("The selected cell is not being displayed by the collection")
+            }
+            
+            let selectedPost = posts[indexPath.row]
+            postDetailViewController.post = selectedPost
     }
-    */
+    
 
 }
 
