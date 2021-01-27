@@ -528,50 +528,46 @@
             </objects>
             <point key="canvasLocation" x="-1620.289855072464" y="1368.75"/>
         </scene>
-        <!--Add News View Controller-->
+        <!--添加动态-->
         <scene sceneID="KpO-rC-uCk">
             <objects>
-                <viewController id="7Cz-SC-cnx" customClass="AddNewsViewController" customModule="Date10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="添加动态" id="7Cz-SC-cnx" customClass="AddPostViewController" customModule="Date10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dFc-Z9-TkT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0hj-Kd-sZj">
-                                <rect key="frame" x="20" y="111" width="360.5" height="515"/>
+                                <rect key="frame" x="10" y="98" width="394" height="412"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-L7-lPw">
-                                        <rect key="frame" x="0.0" y="0.0" width="360.5" height="314"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="327"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="dgL-5y-Z3s">
-                                        <rect key="frame" x="0.0" y="324" width="360.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="337" width="394" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所有人可见" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ew4-I1-INm">
-                                                <rect key="frame" x="0.0" y="0.0" width="164.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-EC-e6o">
-                                                <rect key="frame" x="311.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="345" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" image="addImageIcon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WhN-qH-G0d">
-                                        <rect key="frame" x="0.0" y="365" width="150" height="150"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="Yvg-hF-zN3"/>
-                                            <constraint firstAttribute="height" constant="150" id="xce-Iw-NGa"/>
-                                        </constraints>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYW-KJ-VuC">
+                                        <rect key="frame" x="0.0" y="378" width="74" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="添加照片"/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="99n-zf-Xmh" appends="YES" id="K1J-1E-rjW"/>
+                                            <action selector="addPhoto:" destination="7Cz-SC-cnx" eventType="touchUpInside" id="Pgd-Yd-IZE"/>
                                         </connections>
-                                    </imageView>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dgL-5y-Z3s" firstAttribute="leading" secondItem="0hj-Kd-sZj" secondAttribute="leading" id="3n6-fA-Req"/>
@@ -581,14 +577,58 @@
                                     <constraint firstAttribute="trailing" secondItem="VPb-L7-lPw" secondAttribute="trailing" id="ome-cp-sD3"/>
                                 </constraints>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-YX-iWQ">
+                                <rect key="frame" x="10" y="520" width="394" height="293"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fTr-yS-nkV">
+                                    <size key="itemSize" width="147" height="145"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="R5h-nY-DU4" customClass="AddImageCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="145"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Y4i-7A-OzD">
+                                            <rect key="frame" x="0.0" y="0.0" width="147" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zej-12-KMb">
+                                                    <rect key="frame" x="4" y="4" width="139" height="137"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="AddImageCollectionViewCell"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Ccz-b4-Apr"/>
+                                                        <constraint firstAttribute="height" constant="100" id="Dla-aT-nyP"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Zej-12-KMb" secondAttribute="bottom" constant="4" id="1dn-9l-tz0"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zej-12-KMb" secondAttribute="trailing" constant="4" id="N76-Nd-aNE"/>
+                                                <constraint firstItem="Zej-12-KMb" firstAttribute="leading" secondItem="Y4i-7A-OzD" secondAttribute="leading" constant="4" id="bIX-PS-OHR"/>
+                                                <constraint firstItem="Zej-12-KMb" firstAttribute="top" secondItem="Y4i-7A-OzD" secondAttribute="top" constant="4" id="gZP-bC-enW"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="147" height="145"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="Zej-12-KMb" id="pGn-EI-VBo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yWs-cc-LTA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yWs-cc-LTA" firstAttribute="trailing" secondItem="0hj-Kd-sZj" secondAttribute="trailing" constant="33.5" id="Elm-oK-fNv"/>
-                            <constraint firstItem="0hj-Kd-sZj" firstAttribute="leading" secondItem="yWs-cc-LTA" secondAttribute="leading" constant="20" id="TSf-bf-hF6"/>
+                            <constraint firstItem="yWs-cc-LTA" firstAttribute="trailing" secondItem="0hj-Kd-sZj" secondAttribute="trailing" constant="10" id="Elm-oK-fNv"/>
+                            <constraint firstItem="FlT-YX-iWQ" firstAttribute="bottom" secondItem="yWs-cc-LTA" secondAttribute="bottom" id="HZJ-Hi-j4t"/>
+                            <constraint firstItem="0hj-Kd-sZj" firstAttribute="leading" secondItem="yWs-cc-LTA" secondAttribute="leading" constant="10" id="TSf-bf-hF6"/>
+                            <constraint firstItem="FlT-YX-iWQ" firstAttribute="top" secondItem="0hj-Kd-sZj" secondAttribute="bottom" constant="10" id="Wfr-k6-CU4"/>
+                            <constraint firstItem="yWs-cc-LTA" firstAttribute="trailing" secondItem="FlT-YX-iWQ" secondAttribute="trailing" constant="10" id="ar1-XS-m23"/>
+                            <constraint firstItem="FlT-YX-iWQ" firstAttribute="leading" secondItem="yWs-cc-LTA" secondAttribute="leading" constant="10" id="nQC-cw-Bpm"/>
                             <constraint firstItem="dgL-5y-Z3s" firstAttribute="centerY" secondItem="yWs-cc-LTA" secondAttribute="centerY" id="pB7-UD-K8j"/>
-                            <constraint firstItem="0hj-Kd-sZj" firstAttribute="top" secondItem="yWs-cc-LTA" secondAttribute="top" constant="23" id="qg6-Aj-lsz"/>
+                            <constraint firstItem="0hj-Kd-sZj" firstAttribute="top" secondItem="yWs-cc-LTA" secondAttribute="top" constant="10" id="qg6-Aj-lsz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NY5-iy-tWD">
@@ -604,7 +644,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="WhN-qH-G0d" id="t5F-mx-Mdu"/>
+                        <outlet property="imageCollection" destination="FlT-YX-iWQ" id="wNg-PR-P8x"/>
                         <outlet property="saveButton" destination="UwT-5k-Zeh" id="mFy-cz-bmr"/>
                         <outlet property="textView" destination="VPb-L7-lPw" id="1td-Aa-TD7"/>
                         <outlet property="visiablitySwitch" destination="4ZD-EC-e6o" id="PnA-xu-l7E"/>
@@ -612,11 +652,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rJ-E3-ovF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="F7u-if-iSK" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="99n-zf-Xmh">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="7Cz-SC-cnx" id="TPe-7z-TJe"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-713.04347826086962" y="1368.75"/>
         </scene>
@@ -1620,7 +1655,6 @@
         <segue reference="NBh-UJ-EgA"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="addImageIcon" width="128" height="128"/>
         <image name="figure.wave" catalog="system" width="81" height="128"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
