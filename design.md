@@ -324,6 +324,7 @@ class SpotComment {
     var likes : Int
     var content : String
     var images = [UIImage]()
+    var address : String
 }
 
 class Spot { // 同7.3
