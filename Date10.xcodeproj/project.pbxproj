@@ -59,8 +59,8 @@
 		D059444B25C05DF800BD068E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059444A25C05DF800BD068E /* Constant.swift */; };
 		D059444F25C05ECD00BD068E /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059444E25C05ECD00BD068E /* GlobalData.swift */; };
 		D059445425C0822A00BD068E /* RandomUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059445325C0822A00BD068E /* RandomUtil.swift */; };
-		D064EFFB25C1C395004B079A /* CommentClassify.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D064EFFA25C1C395004B079A /* CommentClassify.mlmodel */; };
-		D064F00325C1D81C004B079A /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = D064F00225C1D81B004B079A /* comments.json */; };
+		D064F00825C1E405004B079A /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = D064F00725C1E405004B079A /* comments.json */; };
+		D064F00B25C1E40C004B079A /* CommentClassify.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D064F00A25C1E40C004B079A /* CommentClassify.mlmodel */; };
 		D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */; };
 		D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */; };
 		D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFE25BBE426005DFE53 /* ViewController.swift */; };
@@ -130,8 +130,8 @@
 		D059444A25C05DF800BD068E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D059444E25C05ECD00BD068E /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		D059445325C0822A00BD068E /* RandomUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUtil.swift; sourceTree = "<group>"; };
-		D064EFFA25C1C395004B079A /* CommentClassify.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CommentClassify.mlmodel; path = ../../../../../Desktop/CommentClassify.mlmodel; sourceTree = "<group>"; };
-		D064F00225C1D81B004B079A /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = comments.json; path = ../../../../../Desktop/comments.json; sourceTree = "<group>"; };
+		D064F00725C1E405004B079A /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = comments.json; path = Date10/comments.json; sourceTree = SOURCE_ROOT; };
+		D064F00A25C1E40C004B079A /* CommentClassify.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CommentClassify.mlmodel; path = Date10/CommentClassify.mlmodel; sourceTree = SOURCE_ROOT; };
 		D0D22CF725BBE426005DFE53 /* Date10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Date10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 		D059444D25C05EA300BD068E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D064F00225C1D81B004B079A /* comments.json */,
+				D064F00725C1E405004B079A /* comments.json */,
 				D059444A25C05DF800BD068E /* Constant.swift */,
 				D059444E25C05ECD00BD068E /* GlobalData.swift */,
 			);
@@ -356,7 +356,7 @@
 		D0D22D3D25BF2862005DFE53 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				D064EFFA25C1C395004B079A /* CommentClassify.mlmodel */,
+				D064F00A25C1E40C004B079A /* CommentClassify.mlmodel */,
 				7B67543125C147FD00C1D44F /* SJImagePickerViewController */,
 				7B67539825BFF2B700C1D44F /* GXBanner */,
 				D0D22D3E25BF289C005DFE53 /* DateUtil.swift */,
@@ -425,7 +425,7 @@
 				D0D22D0A25BBE429005DFE53 /* LaunchScreen.storyboard in Resources */,
 				7B6753A825BFF65E00C1D44F /* banner1.jpeg in Resources */,
 				7B6753A725BFF65E00C1D44F /* banner2.jpeg in Resources */,
-				D064F00325C1D81C004B079A /* comments.json in Resources */,
+				D064F00825C1E405004B079A /* comments.json in Resources */,
 				7B67544625C1488C00C1D44F /* ImageResource.bundle in Resources */,
 				D0D22D0725BBE429005DFE53 /* Assets.xcassets in Resources */,
 				7B6753A625BFF65E00C1D44F /* banner0.jpeg in Resources */,
@@ -492,7 +492,7 @@
 				7B6753AB25BFF79D00C1D44F /* IndexViewController.swift in Sources */,
 				7B67541925C10F2400C1D44F /* FoodDetailCommentCollectionViewCell.swift in Sources */,
 				D0D22D0525BBE426005DFE53 /* Date10.xcdatamodeld in Sources */,
-				D064EFFB25C1C395004B079A /* CommentClassify.mlmodel in Sources */,
+				D064F00B25C1E40C004B079A /* CommentClassify.mlmodel in Sources */,
 				7B67545325C1488C00C1D44F /* SJTitleButton.swift in Sources */,
 				D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */,
 				D0D22D3225BF1D24005DFE53 /* Comment.swift in Sources */,
