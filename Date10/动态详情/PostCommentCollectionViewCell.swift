@@ -8,8 +8,8 @@
 import UIKit
 
 class PostCommentCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var commentorAvatar: UIImageView!
-    @IBOutlet weak var commentorNameLabel: UILabel!
+    @IBOutlet weak var commenterAvatar: UIImageView!
+    @IBOutlet weak var commenterNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var likeNumber: UILabel!

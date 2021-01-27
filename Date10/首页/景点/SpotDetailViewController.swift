@@ -13,7 +13,7 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var commentCollection: UICollectionView!
     
     var spot: Spot!
-    var image = [UIImage]()
+    var images = [UIImage]()
     var comments = [SpotComment]()
     let globalData = GlobalData.getInstance()
     let likeImg = UIImage(named: "like")
@@ -22,11 +22,18 @@ class SpotDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.image = spot.images
+        self.images = spot.images
         self.comments = spot.comments
         self.nameLabel.text = spot.name
         self.commentCollection.delegate = self
         self.commentCollection.dataSource = self
+        
+        self.banner.backgroundColor = .gray
+        self.banner.autoTimeInterval = 3.0
+        self.banner.dataSource = self
+        self.banner.delegate = self
+        self.banner.register(classCellType: GXBannerCell.self)
+        self.banner.reloadData()
     }
 
 }
@@ -49,4 +56,21 @@ extension SpotDetailViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.likeNumber.text = String(comment.likes)
         return cell
     }
+}
+
+extension SpotDetailViewController: GXBannerDelegate, GXBannerDataSource{
+    func numberOfItems() -> Int {
+        return images.count
+    }
+    
+    func banner(_ banner: GXBanner, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell: GXBannerCell = banner.dequeueReusableCell(for: indexPath)
+            cell.contentView.layer.masksToBounds = true
+            cell.contentView.layer.cornerRadius = 10
+            cell.iconIView.image = images[indexPath.row]
+            
+            return cell
+    }
+    
+    
 }
