@@ -14,7 +14,7 @@ class AddNewsViewController: UIViewController, UITextViewDelegate, UIImagePicker
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    var addedNews: News?
+    var addedNews: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,10 +85,15 @@ class AddNewsViewController: UIViewController, UITextViewDelegate, UIImagePicker
             return
         }
         let text = textView.text!
-        let photo = imageView.image
-        let visiable = visiablitySwitch.isOn
         
-        addedNews = News(text: text, photo: photo, visiable: visiable)
+        let visiable = visiablitySwitch.isOn
+        let g = GlobalData.getInstance()
+        addedNews = Post(poster: g.getCurrentUser()!.name, title: text, content: text, isPublic: visiable, address: RandomUtil.randomChoice(Constant.Addresses), liked: false)
+        
+        if let photo = imageView.image {
+            addedNews?.addImage(image: photo)
+        }
+        
     }
 
 }

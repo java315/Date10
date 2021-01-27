@@ -64,7 +64,7 @@ class GlobalData {
     
     private func initPosts(){
         for postTitle in Constant.PostTitles {
-            Posts.append(Post(poster: "boy1", title: postTitle, content: RandomUtil.randomChoice(Constant.PostContents), isPublic: true, address: RandomUtil.randomChoice(Constant.Addresses))!)
+            Posts.append(Post(poster: "boy1", title: postTitle, content: RandomUtil.randomChoice(Constant.PostContents), isPublic: true, address: RandomUtil.randomChoice(Constant.Addresses), liked: false)!)
         }
         
     }
@@ -133,5 +133,13 @@ class GlobalData {
             }
         }
         return posts
+    }
+    
+    public func getAllPosts() -> [Post]{
+        return self.Posts
+    }
+    
+    public func getCurrentUser() -> User? {
+        return self.user
     }
 }

@@ -17,9 +17,20 @@ class IndexViewController: UIViewController {
         newsCollection.dataSource = self
         buttonCollection.delegate = self
         buttonCollection.dataSource = self
+        loadPosts()
     }
     
-    
+    var posts : [Post] = []
+    private func loadPosts(){
+        let globalData = GlobalData.getInstance()
+        if globalData.getFirstLogin() {
+            self.posts = globalData.getAllPosts()
+        }
+        else {
+            //self.posts = NSKeyedUnarchiver.unarchivedObject(withFile : Post.ArchiveURL.path) as? [Post]
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -53,13 +64,14 @@ class IndexViewController: UIViewController {
 
 extension IndexViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return news.count
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = buttonCollection.dequeueReusableCell(withReuseIdentifier: "ButtonCollectionViewCell", for: indexPath) as! ButtonCollectionViewCell
         cell.buttonClickedDelegate = self
-        cell.label.text = news[indexPath.row]
+        cell.label.text = posts[indexPath.row].title
+        
         return cell
     }
 }

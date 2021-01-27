@@ -10,7 +10,7 @@ import os.log
 
 class NewsTableViewController: UITableViewController {
     //MARK: Properties
-    var news = [News]()
+    var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +38,19 @@ class NewsTableViewController: UITableViewController {
             fatalError("The dequed cell is not an instance of NewsTableViewCell")
         }
 
-        let newsSelected = news[indexPath.row]
+        let newsSelected = posts[indexPath.row]
         
-        if newsSelected.photo == nil{
+        if newsSelected.images.isEmpty {
             cell.CellImageView.isHidden = true
         }
         else{
-            cell.CellImageView.image = newsSelected.photo
+            cell.CellImageView.image = newsSelected.images.first
         }
         
 //        cell.CellTextView.text = newsSelected.text
         cell.LikeNumber.text = String(newsSelected.likes)
         
-        if newsSelected.userLike{
+        if newsSelected.liked{
             cell.LikeButton.imageView!.image = UIImage(named: "like")
         }
         else{
