@@ -24,10 +24,10 @@ class GlobalData {
     
     private init() {
         let defaults = UserDefaults.standard
-        guard defaults.bool(forKey: defaultsKeys.NotFirstLogin) else {
-            self.firstLogin = true
-            defaults.set(false, forKey: defaultsKeys.NotFirstLogin)
-        }
+//        guard defaults.bool(forKey: defaultsKeys.NotFirstLogin) else {
+//            self.firstLogin = true
+//            defaults.set(false, forKey: defaultsKeys.NotFirstLogin)
+//        }
         
         initUsers()
         initCouples()
