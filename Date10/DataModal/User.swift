@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-class User {
+import os.log
+class User : NSObject, NSCoding{
     var name : String
     var npy : String?
     var fans = [String]()
@@ -31,6 +32,18 @@ class User {
         self.sex = sex
     }
     
+    required convenience init?(coder: NSCoder) {
+        guard let name = coder.decodeObject(forKey: PropertyKey.name) as? String else {
+            os_log("Unable to decode the name for a User object", log:OSLog.default,type:.debug)
+            return nil
+        }
+        let npy = coder.decodeObject(forKey: PropertyKey.npy) as? String
+        let birthday = coder.decodeObject(forKey: PropertyKey.birthday) as? Date
+        let sex = coder.decodeObject(forKey: PropertyKey.sex) as? Bool
+        let avatar = coder.decodeObject(forKey: PropertyKey.avatar) as? UIImage
+        self.init(name:name,npy:npy,birthday:birthday, avatar: avatar,sex:sex)
+    }
+    
     func follow(user:String) {
         self.followings.append(user)
     }
@@ -38,4 +51,30 @@ class User {
     func fetchFans(users:[String]) {
         self.fans += users
     }
+    
+    struct PropertyKey {
+        static let name = "name"
+        static let npy = "npy"
+        static let fans = "fans"
+        static let sex = "sex"
+        static let birthday = "birthday"
+        static let avatar = "avatar"
+        static let follwings = "follwings"
+        
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name,forKey:PropertyKey.name)
+        coder.encode(npy,forKey:PropertyKey.npy)
+        coder.encode(sex,forKey: PropertyKey.sex)
+        coder.encode(birthday,forKey: PropertyKey.birthday)
+        coder.encode(fans,forKey: PropertyKey.fans)
+        coder.encode(followings,forKey: PropertyKey.follwings)
+        coder.encode(avatar,forKey: PropertyKey.avatar)
+        
+    }
+    
+    
+    
+    
 }

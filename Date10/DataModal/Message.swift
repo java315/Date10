@@ -46,7 +46,7 @@ class Message : NSObject,NSCoding {
     
     required convenience init?(coder aDecoder: NSCoder) {
         guard let sender = aDecoder.decodeObject(forKey: PropertyKey.sender) as? String else {
-            os_log("Unable to decode the sender for a Product object", log:OSLog.default,type:.debug)
+            os_log("Unable to decode the sender for a Message object", log:OSLog.default,type:.debug)
             return nil
         }
         let sendTime = aDecoder.decodeObject(forKey: PropertyKey.sendTime) as? Date

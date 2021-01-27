@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(*,unavailable,message: "change Object News to Post please")
 class News{
     // MARK: Properties
     var text: String

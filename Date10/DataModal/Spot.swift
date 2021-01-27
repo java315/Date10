@@ -16,7 +16,6 @@ class Spot {
     var shortComment : String?
     var score : Float
     var comments = [SpotComment]()
-    
     init?(name:String, address:String,shortComment:String?){
         guard !name.isEmpty else {
             return nil
