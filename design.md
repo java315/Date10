@@ -22,7 +22,7 @@ Date10 设计文档
 
 **动态展示的卡片示意**
 
-<img src="design.assets/Screenshot_20210125_164051_com.dianping.v1.jpg" alt="Screenshot_20210125_164051_com.dianping.v1" style="zoom: 25%;" />
+![](design.assets/Screenshot_20210125_164051_com.dianping.v1.jpg)
 
 ### 1.3 数据接口
 
