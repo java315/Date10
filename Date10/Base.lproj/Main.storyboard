@@ -798,7 +798,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="z2s-gc-MT7" customClass="FoodCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FoodCollectionViewCell" id="z2s-gc-MT7" customClass="FoodCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gyt-Q3-N3y">
@@ -906,7 +906,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="U5D-h2-eFh"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="FoodCollection" destination="9go-mI-BNW" id="Jwr-fM-Mo2"/>
+                        <outlet property="foodCollection" destination="9go-mI-BNW" id="8ek-rF-smz"/>
                         <outlet property="searchBar" destination="YB2-HA-cea" id="MzY-32-cfw"/>
                     </connections>
                 </viewController>

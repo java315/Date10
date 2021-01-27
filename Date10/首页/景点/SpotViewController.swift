@@ -14,6 +14,7 @@ class SpotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadSpots()
         spotCollection.delegate = self
         spotCollection.dataSource = self
         // Do any additional setup after loading the view.
