@@ -46,7 +46,7 @@ class Post{
 ### 1.4 相关代码
 
 - `IndexViewController.swift`：实现页面相关
-- `PostTableViewCell.swift`：展示动态的卡片
+- `IndexPostCollectionViewCell.swift`：展示动态的卡片
 - `ButtonCollectionViewCell.swift`：分类导航的按钮
 
 
@@ -225,6 +225,7 @@ class PostComment {
 - `Comment.swift`
 - `Post.swift`
 - `PostDetailViewController.swift`
+- `PostCommentCollectionViewCell.swift`:动态中评价的cell
 
 ### 5.5 跳转描述
 
@@ -232,7 +233,7 @@ class PostComment {
 
 
 
-## 6 美食分类
+## 6 美食分类√
 
 ### 6.1 页面布局
 
@@ -262,6 +263,7 @@ class Food {
 ### 6.4 相关代码
 
 - `FoodViewController.swift`
+- `FoodCollectionViewCell.swift`
 - `Food.swift`
 
 ### 6.5 跳转描述
@@ -269,7 +271,7 @@ class Food {
 1. 点击具体的美食后将跳转到[美食详情页](#10 美食详情页)
 
 
-## 7 景点分类
+## 7 景点分类√
 
 ### 7.1 页面布局
 
@@ -290,6 +292,7 @@ class Spot {
     var frontImg : UIImage
    	var images = [UIImage]()
     var comments = [SpotComment]()
+    //地点
     var score : Float
 }
 ```
@@ -299,12 +302,14 @@ class Spot {
 ### 7.4 相关代码
 
 - `Spot.swift`
+- `SpotViewController.swift`
+- `SpotCollectionViewCell.swift`
 
 ### 7.5 跳转描述
 
 点击具体的景点跳转到[景点详情页](#8 景点详情页)
 
-## 8 景点详情页
+## 8 景点详情页√
 
 ### 8.1 页面布局
 
@@ -335,11 +340,14 @@ class Spot { // 同7.3
 
 ### 8.4 相关代码
 
+* `SpotDetailViewController.swift`
+* `SpotDetailCommentCollectionViewCell.swift`
+
 ### 8.5 跳转描述
 
 暂无
 
-## 9 动态发布页√
+## 9 动态发布页
 
 ### 9.1 页面布局
 
@@ -364,12 +372,15 @@ class Post {
 
 ### 9.4 相关代码
 
+* `PostDetailViewController.swift`
+* `PostCommentCollectionViewCell.swift`
+
 ### 9.5 跳转描述
 
 1. 点击发布or取消后都会跳转回上一页面
 2. 点击图片输入后会跳转到选择图片的页面
 
-## 10 美食详情页
+## 10 美食详情页√
 
 ### 10.1 页面布局
 
@@ -404,7 +415,8 @@ class Food{
 
 ### 10.4 相关代码
 
-
+* `FoodDetailViewController.swift`
+* `FoodDetailCommentCollectionViewCell.swift`
 
 ### 10.5 跳转描述
 
