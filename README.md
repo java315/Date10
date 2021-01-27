@@ -28,7 +28,10 @@
 
 ```swift
 class GlobalData {
-    
+    static let globalData : GlobalData = GlobalData()
+ 	private init(){
+        //...
+    }   
 }
 ```
 
