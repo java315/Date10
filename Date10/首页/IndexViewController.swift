@@ -8,16 +8,18 @@
 import UIKit
 
 class IndexViewController: UIViewController {
-    var news = ["美食","景点","js","ios","java","swift","js","ios","java"]
+    var button = ["美食","景点"]
+    let likeImg = UIImage(named: "like")
+    let unlikeImg = UIImage(named: "unlike")
     @IBOutlet weak var buttonCollection: UICollectionView!
-    @IBOutlet weak var newsCollection: UICollectionView!
+    @IBOutlet weak var postCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsCollection.delegate = self
-        newsCollection.dataSource = self
+        loadPosts()
+        postCollection.delegate = self
+        postCollection.dataSource = self
         buttonCollection.delegate = self
         buttonCollection.dataSource = self
-        loadPosts()
     }
     
     var posts : [Post] = []
@@ -27,6 +29,7 @@ class IndexViewController: UIViewController {
             self.posts = globalData.getAllPosts()
         }
         else {
+            self.posts = globalData.getAllPosts()
             //self.posts = NSKeyedUnarchiver.unarchivedObject(withFile : Post.ArchiveURL.path) as? [Post]
         }
         
@@ -43,36 +46,37 @@ class IndexViewController: UIViewController {
 
 }
 
-//extension IndexViewController: UITableViewDataSource, UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = newsTable.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as! NewsTableViewCell
-//        print(self.news[indexPath.row])
-//        cell.textLabel?.text = self.news[indexPath.row]
-//        return cell
-//    }
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(self.news.count)
-//        return self.news.count
-//    }
-//
-//}
-
 extension IndexViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+        switch collectionView.restorationIdentifier! {
+            case "ButtonCollection":
+                return button.count
+            case "PostCollection":
+                print(posts.count)
+                return posts.count
+            default:
+                return 0
+            }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = buttonCollection.dequeueReusableCell(withReuseIdentifier: "ButtonCollectionViewCell", for: indexPath) as! ButtonCollectionViewCell
-        cell.buttonClickedDelegate = self
-        cell.label.text = posts[indexPath.row].title
-        
-        return cell
+        switch collectionView.restorationIdentifier! {
+            case "ButtonCollection":
+                let cell = buttonCollection.dequeueReusableCell(withReuseIdentifier: "ButtonCollectionViewCell", for: indexPath) as! ButtonCollectionViewCell
+                cell.buttonClickedDelegate = self
+                cell.label.text = button[indexPath.row]
+                return cell
+            case "PostCollection":
+                let cell = postCollection.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as! IndexPostCollectionViewCell
+                let post = posts[indexPath.row]
+                cell.frontImg.image = post.frontImg
+                cell.title.text = post.title
+                cell.likeImg.image = post.liked ? likeImg : unlikeImg
+                cell.likeNumber.text = String(post.likes)
+                return cell
+            default:
+                fatalError()
+        }
     }
 }
 
