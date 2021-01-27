@@ -181,6 +181,10 @@ class GlobalData {
     }
     
     public func getSomeComments() -> [FoodComment] {
-        self.FoodComments
+        return self.FoodComments
+    }
+    
+    public func getSpots() -> [Spot] {
+        return self.Spots
     }
 }
