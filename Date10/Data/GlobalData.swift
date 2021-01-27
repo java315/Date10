@@ -21,7 +21,7 @@ class GlobalData {
     private var Spots = [Spot]()
     private var Posts = [Post]()
     private var user : User?
-    
+    private var FoodComments = [FoodComment]()
     private init() {
         let defaults = UserDefaults.standard
         let f = defaults.bool(forKey: defaultsKeys.NotFirstLogin)
@@ -29,6 +29,9 @@ class GlobalData {
         if !defaults.bool(forKey: defaultsKeys.NotFirstLogin) {
             self.firstLogin = true
             defaults.set(false, forKey: defaultsKeys.NotFirstLogin)
+        }
+        else {
+            self.firstLogin = false
         }
         
         initUsers()
@@ -66,6 +69,7 @@ class GlobalData {
         for postTitle in Constant.PostTitles {
             Posts.append(Post(poster: "boy1", title: postTitle, content: RandomUtil.randomChoice(Constant.PostContents), isPublic: true, address: RandomUtil.randomChoice(Constant.Addresses), liked: false)!)
         }
+        print(self.Posts.count)
         
     }
     
@@ -77,8 +81,41 @@ class GlobalData {
         }
     }
     
+    private func initFoodComments() {
+        let max_comment_count = 200
+        guard let jsonResult = readJSONFromFile(filename: "comment_data.json") as? [[String:Any]] else {
+            return
+        }
+        for i in 0...max_comment_count {
+            let r = jsonResult[i]
+            let content = r["content"] as? String
+            let commenter = (r["commenter"] as? String)!
+            let avatarUrl = r["avatarUrl"] as? String
+            let price = r["price"] as? Int
+            let likes = r["likes"] as? Int
+            let date = r["date"] as? String
+            let readCnt = r["readCnt"] as? Int
+            let score = (r["score"] as? Int)!
+            self.FoodComments.append(FoodComment(commenter: commenter, content: content!, price: Float(price!), score: score, liked: false)!)
+        }
+    }
+    
+    func readJSONFromFile(filename: String) -> Any? {
+        var json : Any?
+        if let path = Bundle.main.path(forResource: filename, ofType: "json") {
+            do {
+                let fileUrl = URL(fileURLWithPath: path)
+                let data = try Data(contentsOf: fileUrl,options: .mappedIfSafe)
+                json = try? JSONSerialization.jsonObject(with: data)
+            } catch {
+                
+            }
+        }
+        return json
+    }
     
     public func getFirstLogin() -> Bool {
+        print(self.firstLogin)
         return self.firstLogin
     }
     
@@ -141,5 +178,9 @@ class GlobalData {
     
     public func getCurrentUser() -> User? {
         return self.user
+    }
+    
+    public func getSomeComments() -> [FoodComment] {
+        self.FoodComments
     }
 }
