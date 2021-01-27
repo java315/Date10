@@ -60,6 +60,9 @@
 		D059445425C0822A00BD068E /* RandomUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D059445325C0822A00BD068E /* RandomUtil.swift */; };
 		D064F00825C1E405004B079A /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = D064F00725C1E405004B079A /* comments.json */; };
 		D064F00B25C1E40C004B079A /* CommentClassify.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D064F00A25C1E40C004B079A /* CommentClassify.mlmodel */; };
+		D064F00E25C1FE32004B079A /* avatars.json in Resources */ = {isa = PBXBuildFile; fileRef = D064F00D25C1FE32004B079A /* avatars.json */; };
+		D064F01125C1FE3F004B079A /* food_images.json in Resources */ = {isa = PBXBuildFile; fileRef = D064F01025C1FE3E004B079A /* food_images.json */; };
+		D064F01425C200F1004B079A /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064F01325C200F1004B079A /* ImageUtil.swift */; };
 		D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */; };
 		D0D22CFD25BBE426005DFE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */; };
 		D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22CFE25BBE426005DFE53 /* ViewController.swift */; };
@@ -130,6 +133,9 @@
 		D059445325C0822A00BD068E /* RandomUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUtil.swift; sourceTree = "<group>"; };
 		D064F00725C1E405004B079A /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = comments.json; path = Date10/comments.json; sourceTree = SOURCE_ROOT; };
 		D064F00A25C1E40C004B079A /* CommentClassify.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CommentClassify.mlmodel; path = Date10/CommentClassify.mlmodel; sourceTree = SOURCE_ROOT; };
+		D064F00D25C1FE32004B079A /* avatars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = avatars.json; sourceTree = "<group>"; };
+		D064F01025C1FE3E004B079A /* food_images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_images.json; sourceTree = "<group>"; };
+		D064F01325C200F1004B079A /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		D0D22CF725BBE426005DFE53 /* Date10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Date10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D22CFA25BBE426005DFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D22CFC25BBE426005DFE53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -285,6 +291,8 @@
 		D059444D25C05EA300BD068E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D064F00D25C1FE32004B079A /* avatars.json */,
+				D064F01025C1FE3E004B079A /* food_images.json */,
 				D064F00725C1E405004B079A /* comments.json */,
 				D059444A25C05DF800BD068E /* Constant.swift */,
 				D059444E25C05ECD00BD068E /* GlobalData.swift */,
@@ -358,6 +366,7 @@
 				7B67539825BFF2B700C1D44F /* GXBanner */,
 				D0D22D3E25BF289C005DFE53 /* DateUtil.swift */,
 				D059445325C0822A00BD068E /* RandomUtil.swift */,
+				D064F01325C200F1004B079A /* ImageUtil.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -424,9 +433,11 @@
 				7B6753A725BFF65E00C1D44F /* banner2.jpeg in Resources */,
 				D064F00825C1E405004B079A /* comments.json in Resources */,
 				7B67544625C1488C00C1D44F /* ImageResource.bundle in Resources */,
+				D064F01125C1FE3F004B079A /* food_images.json in Resources */,
 				D0D22D0725BBE429005DFE53 /* Assets.xcassets in Resources */,
 				7B6753A625BFF65E00C1D44F /* banner0.jpeg in Resources */,
 				D0D22D0225BBE426005DFE53 /* Main.storyboard in Resources */,
+				D064F00E25C1FE32004B079A /* avatars.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +465,7 @@
 				D0D22CFF25BBE426005DFE53 /* ViewController.swift in Sources */,
 				7B67536E25BF11CA00C1D44F /* MessageViewController.swift in Sources */,
 				7B67545225C1488C00C1D44F /* SJImageManager.swift in Sources */,
+				D064F01425C200F1004B079A /* ImageUtil.swift in Sources */,
 				7B67544725C1488C00C1D44F /* SJHelpers.swift in Sources */,
 				D0D22CFB25BBE426005DFE53 /* AppDelegate.swift in Sources */,
 				7B67537125BF121400C1D44F /* MessageCollectionViewCell.swift in Sources */,

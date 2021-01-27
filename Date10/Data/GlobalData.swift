@@ -24,11 +24,11 @@ class GlobalData {
     private var FoodComments = [FoodComment]()
     private var Messages = [Message]()
     private var Communications = [Communication]()
-    
+    private var AvatarUrls = [String]()
+    private var FoodImageUrls = [String]()
     private init() {
         let defaults = UserDefaults.standard
         let f = defaults.bool(forKey: defaultsKeys.NotFirstLogin)
-        print("flag:",f)
         if !defaults.bool(forKey: defaultsKeys.NotFirstLogin) {
             self.firstLogin = true
             defaults.set(false, forKey: defaultsKeys.NotFirstLogin)
@@ -37,6 +37,8 @@ class GlobalData {
             self.firstLogin = false
         }
         
+        initAvatarUrls()
+        initFoodImageUrls()
         initUsers()
         initCouples()
         initFoods()
@@ -46,6 +48,7 @@ class GlobalData {
         initFoodComments()
         initMessages()
         initCommunications()
+        
     }
     
     private func initUser() {
@@ -54,8 +57,8 @@ class GlobalData {
     
     private func initUsers(){
         for i in 1...Constant.UsersNum {
-            Users.append(User(name: "boy"+String(i), npy: "girl"+String(i), birthday: Date(), avatar: UIImage(), sex: true)!)
-            Users.append(User(name: "girl"+String(i), npy: "boy"+String(i), birthday: Date(), avatar: UIImage(), sex: true)!)
+            Users.append(User(name: "boy"+String(i), npy: "girl"+String(i), birthday: Date(), avatar: randomChoiceImageFromUrls(AvatarUrls), sex: true)!)
+            Users.append(User(name: "girl"+String(i), npy: "boy"+String(i), birthday: Date(), avatar: randomChoiceImageFromUrls(AvatarUrls), sex: false)!)
         }
     }
     
@@ -67,15 +70,21 @@ class GlobalData {
     
     private func initFoods(){
         for foodName in Constant.FoodNames {
-            Foods.append(Food(name: foodName, address: RandomUtil.randomChoice(Constant.Addresses), shortComment: RandomUtil.randomChoice(Constant.ShortComments))!)
+            var f = Food(name: foodName, address: RandomUtil.randomChoice(Constant.Addresses), shortComment: RandomUtil.randomChoice(Constant.ShortComments))!
+            f.addImages(images: randomChoiceImagesFromUrls(FoodImageUrls))
+            print(f.images.count)
+            Foods.append(f)
+            
         }
     }
     
     private func initPosts(){
         for postTitle in Constant.PostTitles {
-            Posts.append(Post(poster: "boy1", title: postTitle, content: RandomUtil.randomChoice(Constant.PostContents), isPublic: true, address: RandomUtil.randomChoice(Constant.Addresses), liked: false)!)
+            var p = Post(poster: "boy1", title: postTitle, content: RandomUtil.randomChoice(Constant.PostContents), isPublic: true, address: RandomUtil.randomChoice(Constant.Addresses), liked: false)!
+            p.addImages(images: randomChoiceImagesFromUrls(FoodImageUrls))
+            Posts.append(p)
         }
-        print(self.Posts.count)
+        
         
     }
     
@@ -83,7 +92,7 @@ class GlobalData {
         for spotName in Constant.SpotNames {
             Spots.append(Spot(name: spotName, address: RandomUtil.randomChoice(Constant.Addresses), shortComment: RandomUtil.randomChoice(Constant.ShortComments))!)
             // 加入图片
-            
+            Spots.last?.addImages(images: randomChoiceImagesFromUrls(FoodImageUrls))
         }
     }
     
@@ -103,13 +112,56 @@ class GlobalData {
             let date = r["date"] as? String
             let readCnt = r["readCnt"] as? Int
             let score = (r["score"] as? Int)!
-            self.FoodComments.append(FoodComment(commenter: commenter, content: content!, price: Float(price!), score: score, liked: false)!)
+            self.FoodComments.append(FoodComment(commenter: commenter, content: content!, price: Float(price!), score: score, liked: false, avatar: randomChoiceImageFromUrls(AvatarUrls))!)
         }
         /*
         for fc in self.FoodComments{
             print(fc.commenter)
         }
          */
+    }
+    
+    private func initAvatarUrls() {
+        guard let jsonResult = readJSONFromFile(filename: "avatars") as? [String] else {
+            print("error for avatar json result")
+            return
+        }
+        print("avatar urls count \(jsonResult.count)")
+        self.AvatarUrls = jsonResult
+    }
+    
+    private func initFoodImageUrls() {
+        guard let jsonResult = readJSONFromFile(filename: "food_images") as? [String] else {
+            print("error for food image json result")
+            return
+        }
+        print("food image urls count \(jsonResult.count)")
+        self.FoodImageUrls = jsonResult
+    }
+    
+    private func randomChoiceImagesFromUrls(_ urls : [String]) -> [UIImage] {
+        let count = RandomUtil.randomNumber(1, 9)
+        var images = [UIImage]()
+        for _ in 1...count {
+            if let image = ImageUtil.getWebImage(RandomUtil.randomChoice(urls)) {
+                images.append(image)
+            }
+            else {
+                //fatalError("load web image fail")
+            }
+            
+        }
+        return images
+    }
+    
+    private func randomChoiceImageFromUrls(_ urls : [String]) -> UIImage {
+        let url = RandomUtil.randomChoice(urls)
+        if let image = ImageUtil.getWebImage(url) {
+            return image
+        }
+        else{
+            return UIImage(named: "user")!
+        }
     }
     
     func readJSONFromFile(filename: String) -> Any? {
