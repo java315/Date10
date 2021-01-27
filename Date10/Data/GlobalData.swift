@@ -22,6 +22,9 @@ class GlobalData {
     private var Posts = [Post]()
     private var user : User?
     private var FoodComments = [FoodComment]()
+    private var Messages = [Message]()
+    private var Communications = [Communication]()
+    
     private init() {
         let defaults = UserDefaults.standard
         let f = defaults.bool(forKey: defaultsKeys.NotFirstLogin)
@@ -40,6 +43,9 @@ class GlobalData {
         initPosts()
         initSpots()
         initUser()
+        initFoodComments()
+        initMessages()
+        initCommunications()
     }
     
     private func initUser() {
@@ -83,7 +89,8 @@ class GlobalData {
     
     private func initFoodComments() {
         let max_comment_count = 200
-        guard let jsonResult = readJSONFromFile(filename: "comment_data.json") as? [[String:Any]] else {
+        guard let jsonResult = readJSONFromFile(filename: "comments") as? [[String:Any]] else {
+            print("error for food comment json result")
             return
         }
         for i in 0...max_comment_count {
@@ -98,6 +105,11 @@ class GlobalData {
             let score = (r["score"] as? Int)!
             self.FoodComments.append(FoodComment(commenter: commenter, content: content!, price: Float(price!), score: score, liked: false)!)
         }
+        /*
+        for fc in self.FoodComments{
+            print(fc.commenter)
+        }
+         */
     }
     
     func readJSONFromFile(filename: String) -> Any? {
@@ -109,10 +121,29 @@ class GlobalData {
                 json = try? JSONSerialization.jsonObject(with: data)
             } catch {
                 
+                print(error)
             }
+        } else {
+            print("resource not found")
         }
+        
         return json
     }
+    
+    private func initMessages(){
+        for _ in 0...40 {
+            self.Messages.append(Message(sender: RandomUtil.randomChoice(self.Users) as! String, content: RandomUtil.randomChoice(Constant.ShortComments), sendTime: DateUtil.randomDate())!)
+        }
+    }
+    
+    private func initCommunications() {
+        for _ in 0...40 {
+            let m = RandomUtil.randomChoice(Messages)
+            self.Communications.append(Communication(userA: "boy1", userB: m.sender)!)
+            self.Communications.last?.sendMessage(message: m)
+        }
+    }
+    
     
     public func getFirstLogin() -> Bool {
         print(self.firstLogin)
@@ -180,7 +211,11 @@ class GlobalData {
         return self.user
     }
     
-    public func getSomeComments() -> [FoodComment] {
-        self.FoodComments
+    public func getFoodComments() -> [FoodComment] {
+        return self.FoodComments
+    }
+    
+    public func getAllCommunications() -> [Communication] {
+        return self.Communications
     }
 }
