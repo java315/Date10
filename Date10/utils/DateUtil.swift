@@ -56,5 +56,10 @@ class DateUtil {
         return c.day ?? -1
     }
     
+    // 随机一个现在时间以前的日期
+    static func randomDate() -> Date {
+        return Date()
+        
+    }
     
 }
