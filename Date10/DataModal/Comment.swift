@@ -12,8 +12,8 @@ class Comment {
     var content : String
     var date : Date
     var likes : Int
-    
-    init?(commenter : String, content : String) {
+    var liked : Bool
+    init?(commenter : String, content : String, liked : Bool?) {
         guard !commenter.isEmpty else {
             return nil
         }
@@ -26,7 +26,17 @@ class Comment {
         self.commenter = commenter
         self.date = Date()
         self.likes = 0
+        self.liked = liked ?? false
     }
+    
+    public func like(){
+        if !liked {
+            likes += 1
+            liked = true
+        }
+    }
+    
+
 }
 
 class PostComment : Comment {
@@ -38,10 +48,10 @@ class FoodComment : Comment {
     var images = [UIImage]()
     var score : Int
     
-    init?(commenter : String, content : String, price : Float, score : Int) {
+    init?(commenter : String, content : String, price : Float, score : Int, liked : Bool?) {
         self.price = price
         self.score = score
-        super.init(commenter:commenter,content:content)
+        super.init(commenter:commenter,content:content,liked: liked)
         
     }
     

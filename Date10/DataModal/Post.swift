@@ -19,8 +19,8 @@ class Post {
     var postDate : Date
     var comments = [PostComment]()
     var frontImg:UIImage?
-    
-    init?(poster:String,title:String,content:String,isPublic:Bool,address : String) {
+    var liked : Bool
+    init?(poster:String,title:String,content:String,isPublic:Bool,address : String, liked : Bool?) {
         guard !poster.isEmpty else {
             return nil
         }
@@ -37,6 +37,7 @@ class Post {
         self.address = address
         self.likes = 0
         self.title = title
+        self.liked = liked ?? false
     }
     
     func addImages(images:[UIImage]){
@@ -51,6 +52,13 @@ class Post {
             frontImg = image
         }
         self.images.append(image)
+    }
+    
+    public func like(){
+        if !liked {
+            liked = true
+            likes += 1
+        }
     }
     
 }
