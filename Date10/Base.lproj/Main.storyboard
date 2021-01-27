@@ -443,7 +443,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EAh-Lo-KMw" customClass="WePostCollectionViewCell" customModule="Date10" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WePostCollectionCell" id="EAh-Lo-KMw" customClass="WePostCollectionViewCell" customModule="Date10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="484"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xcF-m5-R2t">
@@ -524,6 +524,7 @@
                     <connections>
                         <outlet property="boyAvatar" destination="JHO-cz-H2l" id="e6q-ty-B31"/>
                         <outlet property="boyName" destination="onJ-bw-nWr" id="kSc-Wp-fDP"/>
+                        <outlet property="couplePostCollection" destination="v7q-aB-dEx" id="v1T-WT-Ab7"/>
                         <outlet property="girlAvatar" destination="SJf-PD-H1U" id="Iny-Xf-ba5"/>
                         <outlet property="girlName" destination="GNO-Zf-4pd" id="FsT-ne-aht"/>
                         <outlet property="sweetValueLabel" destination="Rds-Df-Fea" id="Ns3-1f-HiH"/>
@@ -847,12 +848,12 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-qT-NzO">
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-qT-NzO">
                                                             <rect key="frame" x="0.0" y="71" width="264" height="41"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhi-ZJ-pT1">
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhi-ZJ-pT1">
                                                             <rect key="frame" x="0.0" y="127" width="264" height="41"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -1599,12 +1600,12 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-bL-rER">
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-bL-rER">
                                                             <rect key="frame" x="0.0" y="71" width="264" height="41"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exA-fE-D5f">
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exA-fE-D5f">
                                                             <rect key="frame" x="0.0" y="127" width="264" height="41"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -1671,7 +1672,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NBh-UJ-EgA"/>
+        <segue reference="0LT-MD-WaF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="figure.wave" catalog="system" width="81" height="128"/>
